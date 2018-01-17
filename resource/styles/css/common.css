@@ -19,10 +19,7 @@ input,
 textarea,
 select {
   margin: 0;
-  padding: 110px;
-  -webkit-transition: all 3s;
-  -o-transition: all 3s;
-  transition: all 3s;
+  padding: 0px;
 }
 body {
   font-family: "微软雅黑", Microsoft YaHei, Arial, sans-serif;
@@ -102,4 +99,9 @@ textarea {
 .btn-sm {
   padding: 5px 10px;
   border-radius: 4px;
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 1000px;
+  }
 }
