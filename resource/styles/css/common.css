@@ -19,13 +19,13 @@ input,
 textarea,
 select {
   margin: 0;
-  padding: 0px;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: "微软雅黑", Microsoft YaHei, Arial, sans-serif;
   font-size: 16px;
-  color: #000;
-  background: #fff;
+  color: #fff;
   -webkit-text-size-adjust: 100%;
 }
 h1,
@@ -37,7 +37,7 @@ h6 {
   font-weight: normal;
 }
 a {
-  color: #172c45;
+  color: #fff;
   text-decoration: none;
 }
 a:hover {
@@ -60,10 +60,10 @@ table {
 p {
   word-wrap: break-word;
 }
-fr {
+.fr {
   float: right;
 }
-fl {
+.fl {
   float: left;
 }
 textarea {
@@ -84,7 +84,15 @@ textarea {
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  background: #ff5511;
+}
+.kids-btn {
+  width: 144px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 27px;
+  background: #F5BF07;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px #BF5313;
 }
 .btn-lg {
   padding: 15px 30px;
@@ -100,8 +108,143 @@ textarea {
   padding: 5px 10px;
   border-radius: 4px;
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .container {
-    width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .header {
+    background: #439539;
+  }
+  .header .header-kids {
+    height: 132px;
+  }
+  .header .header-kids .navBar {
+    height: 90px;
+  }
+  .header .header-kids .navBar .logo {
+    float: left;
+    margin: 26px 40px 0 0;
+  }
+  .header .header-kids .navBar .logo a {
+    display: block;
+  }
+  .header .header-kids .navBar .logo a img {
+    height: 80px;
+  }
+  .header .header-kids .navBar .nav-link {
+    float: left;
+  }
+  .header .header-kids .navBar .nav-link li {
+    float: left;
+  }
+  .header .header-kids .navBar .nav-link li a {
+    display: block;
+    height: 132px;
+  }
+  .header .header-kids .navBar .nav-link li a:hover {
+    background: #fff;
+    color: #007130;
+  }
+  .header .header-kids .navBar .nav-link li a .nav-icon {
+    display: table-cell;
+    width: 132px;
+    height: 74px;
+    text-align: center;
+    vertical-align: bottom;
+  }
+  .header .header-kids .navBar .nav-link li a .nav-icon img {
+    height: auto;
+  }
+  .header .header-kids .navBar .nav-link li a span {
+    display: block;
+    margin-top: 8px;
+    font-size: 24px;
+    text-align: center;
+  }
+  .header .header-kids .login {
+    margin-top: 36px;
+  }
+  .header .header-kids .login a {
+    line-height: 57px;
+    font-size: 36px;
+    background: #F5BF07;
+    box-shadow: 0 5px 5px #D59C12;
+  }
+  .header .header-kids .login a:hover {
+    background: #e1b41b;
+  }
+  .kids-nav {
+    background: #007130;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .header {
+    background: #439539;
+  }
+  .header .header-kids {
+    height: 132px;
+  }
+  .header .header-kids .navBar {
+    height: 90px;
+  }
+  .header .header-kids .navBar .logo {
+    float: left;
+    margin: 26px 40px 0 0;
+  }
+  .header .header-kids .navBar .logo a {
+    display: block;
+  }
+  .header .header-kids .navBar .logo a img {
+    height: 80px;
+  }
+  .header .header-kids .navBar .nav-link {
+    float: left;
+  }
+  .header .header-kids .navBar .nav-link li {
+    float: left;
+  }
+  .header .header-kids .navBar .nav-link li a {
+    display: block;
+    height: 132px;
+  }
+  .header .header-kids .navBar .nav-link li a:hover {
+    background: #fff;
+    color: #007130;
+  }
+  .header .header-kids .navBar .nav-link li a .nav-icon {
+    display: table-cell;
+    width: 132px;
+    height: 74px;
+    text-align: center;
+    vertical-align: bottom;
+  }
+  .header .header-kids .navBar .nav-link li a .nav-icon img {
+    height: auto;
+  }
+  .header .header-kids .navBar .nav-link li a span {
+    display: block;
+    margin-top: 8px;
+    font-size: 24px;
+    text-align: center;
+  }
+  .header .header-kids .login {
+    margin-top: 36px;
+  }
+  .header .header-kids .login a {
+    line-height: 57px;
+    font-size: 36px;
+    background: #F5BF07;
+    box-shadow: 0 5px 5px #D59C12;
+  }
+  .header .header-kids .login a:hover {
+    background: #e1b41b;
+  }
+  .kids-nav {
+    background: #007130;
   }
 }

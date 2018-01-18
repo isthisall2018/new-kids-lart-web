@@ -4,16 +4,178 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./resource/styles/css/common.css">
+    <link rel="stylesheet" href="./resource/styles/css/carousel.css">
+    <link rel="stylesheet" href="./resource/styles/css/index.css">
+    <link rel="stylesheet" href="./resource/styles/css/swiper.css">
+    <script type="text/javascript" src="resource/js/modernizr-carousel.js"></script>
+    <style>
+        .swiper-container {
+            height: 152px;
+            color: #000;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <!--header-->
     <div class="header">
-        <div class="kids-header container"></div>
+        <div class="header-kids container">
+            <div class="navBar fl">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="resource/images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="nav-link">
+                    <li>
+                        <a href="">
+                            <i class="nav-icon">
+                                <img src="resource/images/game.png" alt="game">
+                            </i>
+                            <span>游戏</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="nav-icon">
+                                <img src="resource/images/video.png" alt="TV">
+                            </i>
+                            <span>TV秀</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="nav-icon">
+                                <img src="resource/images/gallery.png" alt="gallery">
+                            </i>
+                            <span>展览</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="nav-icon">
+                                <img src="resource/images/course.png" alt="course">
+                            </i>
+                            <span>课程</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login fr">
+                <a href="login.html" class="btn kids-btn login-btn">
+                    <span>登录</span>
+                    <i>
+                        <img src="resource/images/login-user.png" alt="i-user">
+                    </i>
+                </a>
+            </div>
+        </div>
     </div>
     <!--navigation-->
-    <div class="kids-nav"></div>
+    <div class="kids-nav">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/images/navbar1.png" alt="navbar">
+                    </a>
+                </div>
+
+
+
+
+
+
+                <!-- <div class="swiper-slide">Slide 10</div> -->
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
     <!--banner-->
-    <div class="banner"></div>
+    <div class="banner">
+        <div id="dg-container" class="dg-container">
+            <div class="dg-wrapper">
+                <a href="#"><img src="resource/images/banner/1.jpg" alt="image01"><div></div></a>
+                <a href="#"><img src="resource/images/banner/2.jpg" alt="image02"><div></div></a>
+                <a href="#"><img src="resource/images/banner/3.jpg" alt="image03"><div></div></a>
+                <a href="#"><img src="resource/images/banner/4.jpg" alt="image04"><div></div></a>
+                <a href="#"><img src="resource/images/banner/5.jpg" alt="image05"><div></div></a>
+                <a href="#"><img src="resource/images/banner/6.jpg" alt="image06"><div></div></a>
+            </div>
+            <nav>
+                <span class="dg-prev">&lt;</span>
+                <span class="dg-next">&gt;</span>
+            </nav>
+        </div>
+    </div>
     <!--greatest games-->
     <div class="hot-games"></div>
     <!--hot videos-->
@@ -29,5 +191,51 @@
 <script>
 //    setInterval(function () {
 //        window.location.reload();
-//    },2000)
+//    },5000)
+</script>
+<script src="https://cdn.bootcss.com/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="resource/js/jquery.gallery.js"></script>
+<script type="text/javascript" src="resource/js/swiper.min.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+        $('#dg-container').gallery({
+//            'autoplay': true
+        });
+    });
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 6,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        loop: false,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 </script>
