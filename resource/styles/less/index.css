@@ -38,66 +38,42 @@
   .category .scope .title p {
     margin-top: 5px;
   }
-  .category .scope .scope-slider {
-    position: relative;
-  }
-  .category .scope .scope-slider .swiper-container .swiper-wrapper {
+  .category .scope .swiper-container .swiper-wrapper {
     position: relative;
     padding-bottom: 5px;
   }
-  .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide {
+  .category .scope .swiper-container .swiper-wrapper .swiper-slide {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
-  .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide a {
+  .category .scope .swiper-container .swiper-wrapper .swiper-slide a {
     position: relative;
   }
-  .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide a p.image img {
+  .category .scope .swiper-container .swiper-wrapper .swiper-slide a p.image img {
     width: 100%;
     vertical-align: bottom;
+    border-radius: 50px;
   }
-  .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide a p.text {
+  .category .scope .swiper-container .swiper-wrapper .swiper-slide a p.text {
     position: absolute;
     width: 100%;
     left: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.8);
   }
-  .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide a p.text img {
+  .category .scope .swiper-container .swiper-wrapper .swiper-slide a p.text img {
     position: absolute;
     width: auto;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
   }
-  .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide a p.text span {
+  .category .scope .swiper-container .swiper-wrapper .swiper-slide a p.text span {
     display: block;
     font-size: 30px;
     height: 80px;
     line-height: 80px;
-  }
-  .category .scope .scope-slider .swiper-container .swiper-button-next {
-    display: none;
-  }
-  .category .scope .scope-slider .swiper-container .swiper-button-prev {
-    display: none;
-  }
-  .category .scope .scope-slider label {
-    position: absolute;
-    width: 63px;
-    height: 62px;
-    top: 50%;
-    z-index: 999;
-    transform: translateY(-50%);
-  }
-  .category .scope .scope-slider .prev-btn {
-    left: -16px;
-    background: url("../../images/banner/prev.png") no-repeat center;
-  }
-  .category .scope .scope-slider .next-btn {
-    right: -16px;
-    background: url("../../images/banner/prev.png") no-repeat center;
   }
   .hot-videos {
     background: #35C2F7;
