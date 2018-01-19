@@ -7,6 +7,11 @@
  *
  * Date: Mon Jan 30 2012
  */
+var pageItems='';
+for (var i=0; i<$('#dg-container .dg-wrapper a').length; i++){
+    pageItems+='<li></li>';
+}
+$('#dg-container ul').append(pageItems);
 
 (function( $, undefined ) {
 	
@@ -14,6 +19,7 @@
 	 * Gallery object.
 	 */
 	$.Gallery 				= function( options, element ) {
+		console.log(this)
 	
 		this.$el	= $( element );
 		this._init( options );
@@ -40,11 +46,13 @@
 			
 			this.$items			= this.$wrapper.children();
 			this.itemsCount		= this.$items.length;
+
+			this.$ul           = this.$el.find('.page-circle');
+			this.$ulItems      =this.$ul.children();
 			
 			this.$nav			= this.$el.find('nav');
 			this.$navPrev		= this.$nav.find('.dg-prev');
 			this.$navNext		= this.$nav.find('.dg-next');
-			
 			// minimum of 3 items
 			if( this.itemsCount < 3 ) {
 					
@@ -98,19 +106,19 @@
 			if( this.support3d && this.supportTrans ) {
 			
 				leftCSS 	= {
-					'-webkit-transform'	: 'translateX(-280px) translateZ(-200px) rotateY(35deg)',
-					'-moz-transform'	: 'translateX(-280px) translateZ(-200px) rotateY(35deg)',
-					'-o-transform'		: 'translateX(-280px) translateZ(-200px) rotateY(35deg)',
-					'-ms-transform'		: 'translateX(-280px) translateZ(-200px) rotateY(35deg)',
-					'transform'			: 'translateX(-280px) translateZ(-200px) rotateY(35deg)'
+					'-webkit-transform'	: 'translateX(-146px) translateZ(-200px) rotateY(35deg)',
+					'-moz-transform'	: 'translateX(-146px) translateZ(-200px) rotateY(35deg)',
+					'-o-transform'		: 'translateX(-146px) translateZ(-200px) rotateY(35deg)',
+					'-ms-transform'		: 'translateX(-146px) translateZ(-200px) rotateY(35deg)',
+					'transform'			: 'translateX(-146px) translateZ(-200px) rotateY(35deg)'
 				};
 				
 				rightCSS	= {
-					'-webkit-transform'	: 'translateX(280px) translateZ(-200px) rotateY(-35deg)',
-					'-moz-transform'	: 'translateX(280px) translateZ(-200px) rotateY(-35deg)',
-					'-o-transform'		: 'translateX(280px) translateZ(-200px) rotateY(-35deg)',
-					'-ms-transform'		: 'translateX(280px) translateZ(-200px) rotateY(-35deg)',
-					'transform'			: 'translateX(280px) translateZ(-200px) rotateY(-35deg)'
+					'-webkit-transform'	: 'translateX(146px) translateZ(-200px) rotateY(-35deg)',
+					'-moz-transform'	: 'translateX(146px) translateZ(-200px) rotateY(-35deg)',
+					'-o-transform'		: 'translateX(146px) translateZ(-200px) rotateY(-35deg)',
+					'-ms-transform'		: 'translateX(146px) translateZ(-200px) rotateY(-35deg)',
+					'transform'			: 'translateX(146px) translateZ(-200px) rotateY(-35deg)'
 				};
 				
 				leftCSS.opacity		= 1;
@@ -122,19 +130,19 @@
 			else if( this.support2d && this.supportTrans ) {
 				
 				leftCSS 	= {
-					'-webkit-transform'	: 'translate(-280px) scale(0.8)',
-					'-moz-transform'	: 'translate(-280px) scale(0.8)',
-					'-o-transform'		: 'translate(-280px) scale(0.8)',
-					'-ms-transform'		: 'translate(-280px) scale(0.8)',
-					'transform'			: 'translate(-280px) scale(0.8)'
+					'-webkit-transform'	: 'translate(-146px) scale(0.8)',
+					'-moz-transform'	: 'translate(-146px) scale(0.8)',
+					'-o-transform'		: 'translate(-146px) scale(0.8)',
+					'-ms-transform'		: 'translate(-146px) scale(0.8)',
+					'transform'			: 'translate(-146px) scale(0.8)'
 				};
 				
 				rightCSS	= {
-					'-webkit-transform'	: 'translate(280px) scale(0.8)',
-					'-moz-transform'	: 'translate(280px) scale(0.8)',
-					'-o-transform'		: 'translate(280px) scale(0.8)',
-					'-ms-transform'		: 'translate(280px) scale(0.8)',
-					'transform'			: 'translate(280px) scale(0.8)'
+					'-webkit-transform'	: 'translate(146px) scale(0.8)',
+					'-moz-transform'	: 'translate(146px) scale(0.8)',
+					'-o-transform'		: 'translate(146px) scale(0.8)',
+					'-ms-transform'		: 'translate(146px) scale(0.8)',
+					'transform'			: 'translate(146px) scale(0.8)'
 				};
 				
 				currentCSS	= {
@@ -160,8 +168,12 @@
 		_setItems			: function() {
 			
 			this.$items.removeClass('dg-center');
-			
+            this.$ulItems.removeClass('active');
+
 			this.$currentItm	= this.$items.eq( this.current );
+			this.$currentUlItm  = this.$ulItems.eq( this.current );
+            this.$currentUlItm.addClass('active');
+
 			this.$leftItm		= ( this.current === 0 ) ? this.$items.eq( this.itemsCount - 1 ) : this.$items.eq( this.current - 1 );
 			this.$rightItm		= ( this.current === this.itemsCount - 1 ) ? this.$items.eq( 0 ) : this.$items.eq( this.current + 1 );
 			
@@ -191,7 +203,7 @@
 			var _self	= this;
 			
 			this.$navPrev.on( 'click.gallery', function( event ) {
-				
+
 				if( _self.options.autoplay ) {
 				
 					clearTimeout( _self.slideshow );
@@ -221,6 +233,10 @@
 			this.$wrapper.on( 'webkitTransitionEnd.gallery transitionend.gallery OTransitionEnd.gallery', function( event ) {
 				
 				_self.$currentItm.addClass('dg-center');
+                _self.$currentUlItm.addClass('active');
+
+
+                //--------------------------------------
 				_self.$items.removeClass('dg-transition');
 				_self.isAnim	= false;
 				
@@ -234,44 +250,44 @@
 				switch( position ) {
 					case 'outleft':
 						return {
-							'-webkit-transform'	: 'translateX(-280px) translateZ(-300px) rotateY(35deg)',
-							'-moz-transform'	: 'translateX(-280px) translateZ(-300px) rotateY(35deg)',
-							'-o-transform'		: 'translateX(-280px) translateZ(-300px) rotateY(35deg)',
-							'-ms-transform'		: 'translateX(-280px) translateZ(-300px) rotateY(35deg)',
-							'transform'			: 'translateX(-280px) translateZ(-300px) rotateY(35deg)',
+							'-webkit-transform'	: 'translateX(-146px) translateZ(-300px) rotateY(35deg)',
+							'-moz-transform'	: 'translateX(-146px) translateZ(-300px) rotateY(35deg)',
+							'-o-transform'		: 'translateX(-146px) translateZ(-300px) rotateY(35deg)',
+							'-ms-transform'		: 'translateX(-146px) translateZ(-300px) rotateY(35deg)',
+							'transform'			: 'translateX(-146px) translateZ(-300px) rotateY(35deg)',
 							'opacity'			: 0,
 							'visibility'		: 'hidden'
 						};
 						break;
 					case 'outright':
 						return {
-							'-webkit-transform'	: 'translateX(280px) translateZ(-300px) rotateY(-35deg)',
-							'-moz-transform'	: 'translateX(280px) translateZ(-300px) rotateY(-35deg)',
-							'-o-transform'		: 'translateX(280px) translateZ(-300px) rotateY(-35deg)',
-							'-ms-transform'		: 'translateX(280px) translateZ(-300px) rotateY(-35deg)',
-							'transform'			: 'translateX(280px) translateZ(-300px) rotateY(-35deg)',
+							'-webkit-transform'	: 'translateX(146px) translateZ(-300px) rotateY(-35deg)',
+							'-moz-transform'	: 'translateX(146px) translateZ(-300px) rotateY(-35deg)',
+							'-o-transform'		: 'translateX(146px) translateZ(-300px) rotateY(-35deg)',
+							'-ms-transform'		: 'translateX(146px) translateZ(-300px) rotateY(-35deg)',
+							'transform'			: 'translateX(146px) translateZ(-300px) rotateY(-35deg)',
 							'opacity'			: 0,
 							'visibility'		: 'hidden'
 						};
 						break;
 					case 'left':
 						return {
-							'-webkit-transform'	: 'translateX(-280px) translateZ(-200px) rotateY(45deg)',
-							'-moz-transform'	: 'translateX(-280px) translateZ(-200px) rotateY(45deg)',
-							'-o-transform'		: 'translateX(-280px) translateZ(-200px) rotateY(45deg)',
-							'-ms-transform'		: 'translateX(-280px) translateZ(-200px) rotateY(45deg)',
-							'transform'			: 'translateX(-280px) translateZ(-200px) rotateY(45deg)',
+							'-webkit-transform'	: 'translateX(-146px) translateZ(-200px) rotateY(35deg)',
+							'-moz-transform'	: 'translateX(-146px) translateZ(-200px) rotateY(35deg)',
+							'-o-transform'		: 'translateX(-146px) translateZ(-200px) rotateY(35deg)',
+							'-ms-transform'		: 'translateX(-146px) translateZ(-200px) rotateY(35deg)',
+							'transform'			: 'translateX(-146px) translateZ(-200px) rotateY(35deg)',
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};
 						break;
 					case 'right':
 						return {
-							'-webkit-transform'	: 'translateX(280px) translateZ(-200px) rotateY(-35deg)',
-							'-moz-transform'	: 'translateX(280px) translateZ(-200px) rotateY(-35deg)',
-							'-o-transform'		: 'translateX(280px) translateZ(-200px) rotateY(-35deg)',
-							'-ms-transform'		: 'translateX(280px) translateZ(-200px) rotateY(-35deg)',
-							'transform'			: 'translateX(280px) translateZ(-200px) rotateY(-35deg)',
+							'-webkit-transform'	: 'translateX(146px) translateZ(-200px) rotateY(-35deg)',
+							'-moz-transform'	: 'translateX(146px) translateZ(-200px) rotateY(-35deg)',
+							'-o-transform'		: 'translateX(146px) translateZ(-200px) rotateY(-35deg)',
+							'-ms-transform'		: 'translateX(146px) translateZ(-200px) rotateY(-35deg)',
+							'transform'			: 'translateX(146px) translateZ(-200px) rotateY(-35deg)',
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};
@@ -295,44 +311,44 @@
 				switch( position ) {
 					case 'outleft':
 						return {
-							'-webkit-transform'	: 'translate(-450px) scale(0.7)',
-							'-moz-transform'	: 'translate(-450px) scale(0.7)',
-							'-o-transform'		: 'translate(-450px) scale(0.7)',
-							'-ms-transform'		: 'translate(-450px) scale(0.7)',
-							'transform'			: 'translate(-450px) scale(0.7)',
+							'-webkit-transform'	: 'translate(-146px) scale(0.7)',
+							'-moz-transform'	: 'translate(-146px) scale(0.7)',
+							'-o-transform'		: 'translate(-146px) scale(0.7)',
+							'-ms-transform'		: 'translate(-146px) scale(0.7)',
+							'transform'			: 'translate(-146px) scale(0.7)',
 							'opacity'			: 0,
 							'visibility'		: 'hidden'
 						};
 						break;
 					case 'outright':
 						return {
-							'-webkit-transform'	: 'translate(450px) scale(0.7)',
-							'-moz-transform'	: 'translate(450px) scale(0.7)',
-							'-o-transform'		: 'translate(450px) scale(0.7)',
-							'-ms-transform'		: 'translate(450px) scale(0.7)',
-							'transform'			: 'translate(450px) scale(0.7)',
+							'-webkit-transform'	: 'translate(146px) scale(0.7)',
+							'-moz-transform'	: 'translate(146px) scale(0.7)',
+							'-o-transform'		: 'translate(146px) scale(0.7)',
+							'-ms-transform'		: 'translate(146px) scale(0.7)',
+							'transform'			: 'translate(146px) scale(0.7)',
 							'opacity'			: 0,
 							'visibility'		: 'hidden'
 						};
 						break;
 					case 'left':
 						return {
-							'-webkit-transform'	: 'translate(-280px) scale(0.8)',
-							'-moz-transform'	: 'translate(-280px) scale(0.8)',
-							'-o-transform'		: 'translate(-280px) scale(0.8)',
-							'-ms-transform'		: 'translate(-280px) scale(0.8)',
-							'transform'			: 'translate(-280px) scale(0.8)',
+							'-webkit-transform'	: 'translate(-146px) scale(0.8)',
+							'-moz-transform'	: 'translate(-146px) scale(0.8)',
+							'-o-transform'		: 'translate(-146px) scale(0.8)',
+							'-ms-transform'		: 'translate(-146px) scale(0.8)',
+							'transform'			: 'translate(-146px) scale(0.8)',
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};
 						break;
 					case 'right':
 						return {
-							'-webkit-transform'	: 'translate(280px) scale(0.8)',
-							'-moz-transform'	: 'translate(280px) scale(0.8)',
-							'-o-transform'		: 'translate(280px) scale(0.8)',
-							'-ms-transform'		: 'translate(280px) scale(0.8)',
-							'transform'			: 'translate(280px) scale(0.8)',
+							'-webkit-transform'	: 'translate(146px) scale(0.8)',
+							'-moz-transform'	: 'translate(146px) scale(0.8)',
+							'-o-transform'		: 'translate(146px) scale(0.8)',
+							'-ms-transform'		: 'translate(146px) scale(0.8)',
+							'transform'			: 'translate(146px) scale(0.8)',
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};

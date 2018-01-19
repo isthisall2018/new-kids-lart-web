@@ -5,32 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="./resource/styles/css/common.css">
     <link rel="stylesheet" href="./resource/styles/css/carousel.css">
-    <link rel="stylesheet" href="./resource/styles/css/index.css">
     <link rel="stylesheet" href="./resource/styles/css/swiper.css">
+    <link rel="stylesheet" href="./resource/styles/css/index.css">
     <script type="text/javascript" src="resource/js/modernizr-carousel.js"></script>
-    <style>
-        .swiper-container {
-            height: 152px;
-            color: #000;
-        }
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
-    </style>
 </head>
 <body>
     <!--header-->
@@ -89,70 +66,63 @@
     </div>
     <!--navigation-->
     <div class="kids-nav">
-        <div class="swiper-container">
+        <div class="swiper-container" id="topNav">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="video.html">
-                        <img src="resource/images/navbar1.png" alt="navbar">
+                        <img src="resource/images/navbar1.png">
                     </a>
                 </div>
-
-
-
-
-
-
-                <!-- <div class="swiper-slide">Slide 10</div> -->
             </div>
             <!-- Add Arrows -->
             <div class="swiper-button-next"></div>
@@ -163,27 +133,245 @@
     <div class="banner">
         <div id="dg-container" class="dg-container">
             <div class="dg-wrapper">
-                <a href="#"><img src="resource/images/banner/1.jpg" alt="image01"><div></div></a>
-                <a href="#"><img src="resource/images/banner/2.jpg" alt="image02"><div></div></a>
-                <a href="#"><img src="resource/images/banner/3.jpg" alt="image03"><div></div></a>
-                <a href="#"><img src="resource/images/banner/4.jpg" alt="image04"><div></div></a>
-                <a href="#"><img src="resource/images/banner/5.jpg" alt="image05"><div></div></a>
-                <a href="#"><img src="resource/images/banner/6.jpg" alt="image06"><div></div></a>
+                <a href="#">
+                    <p class="img_part">
+                        <img src="resource/images/banner/banner1.png">
+                    </p>
+                    <p class="title">
+                        <img src="resource/images/i-gallery.png">
+                        <span>儿童艺术展</span>
+                    </p>
+                </a>
+                <a href="#">
+                    <p class="img_part">
+                        <img src="resource/images/banner/banner2.png">
+                    </p>
+                    <p class="title">
+                        <img src="resource/images/i-video.png">
+                        <span>儿童艺术展</span>
+                    </p>
+                </a>
+                <a href="#">
+                    <p class="img_part">
+                        <img src="resource/images/banner/banner3.png">
+                    </p>
+                    <p class="title">
+                        <img src="resource/images/i-game.png">
+                        <span>儿童艺术展</span>
+                    </p>
+                </a>
             </div>
             <nav>
-                <span class="dg-prev">&lt;</span>
-                <span class="dg-next">&gt;</span>
+                <span class="dg-prev"></span>
+                <span class="dg-next"></span>
             </nav>
+            <ul class="page-circle"></ul>
         </div>
     </div>
     <!--greatest games-->
-    <div class="hot-games"></div>
+    <div class="category best-games">
+        <div class="scope">
+            <div class="title">
+                <p class="fl">
+                    <img src="resource/images/best-games.png" alt="games">
+                </p>
+                <a href="#" class="btn kids-btn fr">更多游戏</a>
+            </div>
+            <div class="swiper-container" id="games">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k5.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-game.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k1.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-game.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k2.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-game.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
     <!--hot videos-->
-    <div class="hot-videos"></div>
+    <div class="category hot-videos">
+        <div class="scope">
+            <div class="title">
+                <p class="fl">
+                    <img src="resource/images/hot-videos.png" alt="games">
+                </p>
+                <a href="#" class="btn kids-btn fr">更多视频</a>
+            </div>
+            <div class="swiper-container" id="video">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k2.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-video.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k5.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-video.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k1.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-video.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
     <!--art gallery-->
-    <div class="art-gallery"></div>
+    <div class="category art-gallery">
+        <div class="scope">
+            <div class="title">
+                <p class="fl">
+                    <img src="resource/images/art-gallery.png" alt="games">
+                </p>
+                <a href="#" class="btn kids-btn fr">更多活动</a>
+            </div>
+            <div class="swiper-container" id="gallery">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k2.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-gallery.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k1.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-gallery.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k5.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-gallery.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
     <!--creative course-->
-    <div class="creative-course"></div>
+    <div class="category creative-course">
+        <div class="scope">
+            <div class="title">
+                <p class="fl">
+                    <img src="resource/images/creative-course.png" alt="games">
+                </p>
+                <a href="#" class="btn kids-btn fr">更多课程</a>
+            </div>
+            <div class="swiper-container" id="course">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k1.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-course.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k3.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-course.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k4.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-course.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
     <!--footer-->
     <div class="footer"></div>
 </body>
@@ -199,43 +387,76 @@
 
 <script type="text/javascript">
     $(function() {
-        $('#dg-container').gallery({
-//            'autoplay': true
-        });
+       $('#dg-container').gallery({
+            current: 0,
+            autoplay: true,
+            interval	: 3000
+       });
+//        $('#dg-container ul li').on('click',function () {
+//            $('#dg-container ul li').removeClass('active');
+//            $(this).addClass('active');
+//            $('#dg-container .dg-wrapper a').removeClass('dg-center');
+//            $('#dg-container .dg-wrapper a').eq($(this).index()).addClass('dg-center').css({
+//                opacity: 1,
+//                visibility: "visible",
+//                transform: "translateX(0) translateZ(0) rotateY(0)"
+//            })
+//        })
     });
 </script>
 <script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 6,
+    var swiperNav = new Swiper('#topNav', {
+        slidesPerView: 7,
         spaceBetween: 20,
-        slidesPerGroup: 1,
+        slidesPerGroup: 3,
         loop: false,
         loopFillGroupWithBlank: true,
+        freeMode: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
-        breakpoints: {
-            1024: {
-                slidesPerView: 6,
-                spaceBetween: 30,
-            },
-            768: {
-                slidesPerView: 5,
-                spaceBetween: 20,
-            },
-            640: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-            },
-            320: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-            }
-        },
+//        breakpoints: {
+//            1024: {
+//                slidesPerView: 6,
+//                spaceBetween: 30,
+//            },
+//            768: {
+//                slidesPerView: 5,
+//                spaceBetween: 20,
+//            },
+//            640: {
+//                slidesPerView: 4,
+//                spaceBetween: 20,
+//            },
+//            320: {
+//                slidesPerView: 3,
+//                spaceBetween: 10,
+//            }
+//        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
     });
+    var swiperObj={
+        slidesPerView: 2.5,
+        spaceBetween: 40,
+        slidesPerGroup: 1,
+        loop: false,
+        loopFillGroupWithBlank: true,
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    };
+    var swiperGames = new Swiper('#games',swiperObj);
+    var swiperVideo = new Swiper('#video',swiperObj);
+    var swiperGallery = new Swiper('#gallery',swiperObj);
+    var swiperCourse = new Swiper('#course',swiperObj);
 </script>
