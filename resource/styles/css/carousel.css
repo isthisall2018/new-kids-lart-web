@@ -5,8 +5,7 @@
 }
 
 .dg-wrapper {
-	width: 632px;
-	height: 356px;
+	width: 62%;
 	margin: 0 auto;
 	position: relative;
 	-webkit-transform-style: preserve-3d;
@@ -22,8 +21,7 @@
 }
 
 .dg-wrapper a {
-	width: 633px;
-	height: 356px;
+	width: 100%;
 	display: block;
 	position: absolute;
 	left: 0;
@@ -76,24 +74,29 @@
 	position: absolute;
 	top: 50%;
 	cursor: pointer;
-	width: 63px;
-	height: 62px;
-	opacity: 0.8;
+	width: 66px;
+	height: 66px;
 	transform: translateY(-50%);
 }
 .dg-container nav span:active {
 	outline: none;
 }
 .dg-container nav .dg-prev {
-	left: 40px;
+	left: 4%;
 	background: transparent url(../../images/banner/prev.png) no-repeat center;
 }
+
+.dg-container nav .dg-prev:active {
+	background: transparent url(../../images/banner/prev-g.png);
+}
+
 .dg-container nav .dg-next {
-	right: 40px;
-	background: transparent url(../../images/banner/prev.png) no-repeat center;
+	right: 4%;
+	background: transparent url(../../images/banner/next.png) no-repeat center;
 }
-.dg-container nav span:hover {
-	opacity: 1;
+
+.dg-container nav .dg-next:active {
+	background: transparent url(../../images/banner/next-g.png);
 }
 
 .dg-container .page-circle {
@@ -108,9 +111,9 @@
 	height: 14px;
 	margin: 0 5px;
 	cursor: pointer;
-	background: #fff;
+	background: #811965;
 	border-radius: 50%;
 }
 .dg-container .page-circle .active {
-	background: #811965;
+	background: #fff;
 }

@@ -5,9 +5,6 @@
         .dg-container{
             .dg-wrapper{
                 a{
-                    .img_part{
-
-                    }
                     .title{
                         position: absolute;
                         width: 100%;
@@ -41,10 +38,18 @@
         .scope{
             padding: 0 40px;
             .title{
+                position: relative;
                 overflow: hidden;
                 padding: 23px 0 25px 0;
                 p{
+                    float: left;
                     margin-top: 5px;
+                }
+                a{
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
                 }
             }
             .scope-slider{
@@ -70,10 +75,11 @@
                                     width: 100%;
                                     left: 0;
                                     bottom: 0;
+                                    padding: 7% 0;
                                     background:rgba(0,0,0,0.8);
                                     img{
                                         position: absolute;
-                                        width: auto;
+                                        width: 15%;
                                         left: 20px;
                                         top: 50%;
                                         transform: translateY(-50%);
@@ -81,23 +87,12 @@
                                     }
                                     span{
                                         display: block;
-                                        font-size: 30px;
-                                        height: 80px;
-                                        line-height: 80px;
+                                        font-size: 24px;
                                     }
                                 }
 
                             }
                         }
-                        //&:after{
-                        //    position: absolute;
-                        //    content: '';
-                        //    height: 110%;
-                        //    width: 1px;
-                        //    top: -5%;
-                        //    right: 0;
-                        //    background: #000;
-                        //}
                     }
                     .swiper-button-next{
                         display: none;
@@ -108,8 +103,8 @@
                 }
                 label{
                     position: absolute;
-                    width: 63px;
-                    height: 62px;
+                    width: 66px;
+                    height: 66px;
                     top: 50%;
                     z-index: 999;
                     cursor: pointer;
@@ -118,10 +113,16 @@
                 .prev-btn{
                     left: -16px;
                     background: url("../../images/banner/prev.png") no-repeat center;
+                    &:active{
+                        background: url("../../images/banner/prev-g.png");
+                    }
                 }
                 .next-btn{
                     right: -16px;
-                    background: url("../../images/banner/prev.png") no-repeat center;
+                    background: url("../../images/banner/next.png") no-repeat center;
+                    &:active{
+                        background: url("../../images/banner/next-g.png");
+                    }
                 }
 
             }

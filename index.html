@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Title</title>
     <link rel="stylesheet" href="./resource/styles/css/common.css">
     <link rel="stylesheet" href="./resource/styles/css/carousel.css">
     <link rel="stylesheet" href="./resource/styles/css/swiper.css">
     <link rel="stylesheet" href="./resource/styles/css/index.css">
     <script type="text/javascript" src="resource/js/modernizr-carousel.js"></script>
+    <script src="resource/js/jquery.min.js"></script>
+    <script src="resource/js/common/common.js"></script>
+    <script src="resource/js/swiper.min.js"></script>
 </head>
 <body>
     <!--header-->
@@ -125,18 +130,66 @@
                 </div>
             </div>
             <!-- Add Arrows -->
-            <div class="page-right">
-                <span class="swiper-button-next"></span>
-            </div>
-            <div class="page-right">
-                <span class="swiper-button-prev"></span>
+            <div class="page-Arrows">
+                <span class="swiper-button-next">
+                    <i class="i-arrows"></i>
+                </span>
+                <span class="swiper-button-prev">
+                    <i class="i-arrows"></i>
+                </span>
             </div>
         </div>
+        <script type="text/javascript">
+            var swiperNav = new Swiper('#topNav', {
+                spaceBetween: 20,
+                slidesPerGroup: 3,
+                loop: false,
+                loopFillGroupWithBlank: true,
+                freeMode: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 7,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 7,
+                        spaceBetween: 20,
+                    },
+                    640: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                    320: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    }
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            // set navbar img height
+            $('#topNav .swiper-wrapper .swiper-slide a img').css({'width': '100%'});
+        </script>
     </div>
     <!--banner-->
     <div class="banner">
         <div id="dg-container" class="dg-container">
             <div class="dg-wrapper">
+                <a href="#">
+                    <p class="img_part">
+                        <img src="resource/images/banner/banner1.png">
+                    </p>
+                    <p class="title">
+                        <img src="resource/images/i-gallery.png">
+                        <span>儿童艺术展</span>
+                    </p>
+                </a>
                 <a href="#">
                     <p class="img_part">
                         <img src="resource/images/banner/banner1.png">
@@ -171,15 +224,22 @@
             </nav>
             <ul class="page-circle"></ul>
         </div>
+        <script type="text/javascript">
+            //设置bannner轮播的高度
+            if(!IsPC()){
+                var res= $('#dg-container .dg-wrapper a');
+                res.parent().css('height',res.height());
+            }
+        </script>
     </div>
     <!--greatest games-->
     <div class="category best-games">
         <div class="scope">
             <div class="title">
-                <p class="fl">
-                    <img src="resource/images/best-games.png" alt="games">
+                <p>
+                    <img src="resource/images/best-games.png">
                 </p>
-                <a href="#" class="btn kids-btn fr">更多游戏</a>
+                <a href="video.html" class="btn kids-btn">更多游戏</a>
             </div>
             <div class="scope-slider">
                 <div class="swiper-container" id="games">
@@ -232,10 +292,10 @@
     <div class="category hot-videos">
         <div class="scope">
             <div class="title">
-                <p class="fl">
-                    <img src="resource/images/hot-videos.png" alt="games">
+                <p>
+                    <img src="resource/images/hot-videos.png">
                 </p>
-                <a href="#" class="btn kids-btn fr">更多视频</a>
+                <a href="#" class="btn kids-btn">更多视频</a>
             </div>
             <div class="scope-slider">
                 <div class="swiper-container" id="videos">
@@ -246,7 +306,7 @@
                                     <img src="resource/images/k2.png">
                                 </p>
                                 <p class="text">
-                                    <img src="resource/images/i-game.png">
+                                    <img src="resource/images/i-video.png">
                                     <span>儿童艺术展</span>
                                 </p>
                             </a>
@@ -257,7 +317,7 @@
                                     <img src="resource/images/k4.png">
                                 </p>
                                 <p class="text">
-                                    <img src="resource/images/i-game.png">
+                                    <img src="resource/images/i-video.png">
                                     <span>儿童艺术展</span>
                                 </p>
                             </a>
@@ -268,7 +328,7 @@
                                     <img src="resource/images/k1.png">
                                 </p>
                                 <p class="text">
-                                    <img src="resource/images/i-game.png">
+                                    <img src="resource/images/i-video.png">
                                     <span>儿童艺术展</span>
                                 </p>
                             </a>
@@ -288,10 +348,10 @@
     <div class="category art-gallery">
         <div class="scope">
             <div class="title">
-                <p class="fl">
-                    <img src="resource/images/art-gallery.png" alt="games">
+                <p>
+                    <img src="resource/images/art-gallery.png">
                 </p>
-                <a href="#" class="btn kids-btn fr">更多活动</a>
+                <a href="#" class="btn kids-btn">更多活动</a>
             </div>
             <div class="scope-slider">
                 <div class="swiper-container" id="gallery">
@@ -299,10 +359,10 @@
                         <div class="swiper-slide">
                             <a href="video.html">
                                 <p class="image">
-                                    <img src="resource/images/k3.png">
+                                    <img src="resource/images/gallery-1.jpg">
                                 </p>
                                 <p class="text">
-                                    <img src="resource/images/i-game.png">
+                                    <img src="resource/images/i-gallery.png">
                                     <span>儿童艺术展</span>
                                 </p>
                             </a>
@@ -310,10 +370,10 @@
                         <div class="swiper-slide">
                             <a href="video.html">
                                 <p class="image">
-                                    <img src="resource/images/k5.png">
+                                    <img src="resource/images/gallery-2.jpg">
                                 </p>
                                 <p class="text">
-                                    <img src="resource/images/i-game.png">
+                                    <img src="resource/images/i-gallery.png">
                                     <span>儿童艺术展</span>
                                 </p>
                             </a>
@@ -321,10 +381,10 @@
                         <div class="swiper-slide">
                             <a href="video.html">
                                 <p class="image">
-                                    <img src="resource/images/k2.png">
+                                    <img src="resource/images/gallery-3.jpg">
                                 </p>
                                 <p class="text">
-                                    <img src="resource/images/i-game.png">
+                                    <img src="resource/images/i-gallery.png">
                                     <span>儿童艺术展</span>
                                 </p>
                             </a>
@@ -344,10 +404,10 @@
     <div class="category creative-course">
         <div class="scope">
             <div class="title">
-                <p class="fl">
-                    <img src="resource/images/creative-course.png" alt="games">
+                <p>
+                    <img src="resource/images/creative-course.png">
                 </p>
-                <a href="#" class="btn kids-btn fr">更多课程</a>
+                <a href="#" class="btn kids-btn">更多课程</a>
             </div>
             <div class="scope-slider">
                 <div class="swiper-container" id="course">
@@ -358,7 +418,7 @@
                                     <img src="resource/images/k1.png">
                                 </p>
                                 <p class="text">
-                                    <img src="resource/images/i-game.png">
+                                    <img src="resource/images/i-course.png">
                                     <span>儿童艺术展</span>
                                 </p>
                             </a>
@@ -369,7 +429,7 @@
                                     <img src="resource/images/k2.png">
                                 </p>
                                 <p class="text">
-                                    <img src="resource/images/i-game.png">
+                                    <img src="resource/images/i-course.png">
                                     <span>儿童艺术展</span>
                                 </p>
                             </a>
@@ -380,7 +440,7 @@
                                     <img src="resource/images/k4.png">
                                 </p>
                                 <p class="text">
-                                    <img src="resource/images/i-game.png">
+                                    <img src="resource/images/i-course.png">
                                     <span>儿童艺术展</span>
                                 </p>
                             </a>
@@ -400,68 +460,19 @@
     <div class="footer"></div>
 </body>
 </html>
+<script src="resource/js/jquery.gallery.js"></script>
 <script>
-//    setInterval(function () {
-//        window.location.reload();
-//    },5000)
-</script>
-<script src="https://cdn.bootcss.com/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="resource/js/jquery.gallery.js"></script>
-<script type="text/javascript" src="resource/js/swiper.min.js"></script>
-
-<script type="text/javascript">
-    $(function() {
-       $('#dg-container').gallery({
-            current: 0,
-            autoplay: true,
-            interval	: 3000
-       });
-//        $('#dg-container ul li').on('click',function () {
-//            $('#dg-container ul li').removeClass('active');
-//            $(this).addClass('active');
-//            $('#dg-container .dg-wrapper a').removeClass('dg-center');
-//            $('#dg-container .dg-wrapper a').eq($(this).index()).addClass('dg-center').css({
-//                opacity: 1,
-//                visibility: "visible",
-//                transform: "translateX(0) translateZ(0) rotateY(0)"
-//            })
-//        })
+    $('#dg-container').gallery({
+        current: 0,
+//                autoplay: true,
+        interval	: 3000
     });
-</script>
-<script>
-    var swiperNav = new Swiper('#topNav', {
-        slidesPerView: 7,
-        spaceBetween: 20,
-        slidesPerGroup: 3,
-        loop: false,
-        loopFillGroupWithBlank: true,
-        freeMode: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-//        breakpoints: {
-//            1024: {
-//                slidesPerView: 6,
-//                spaceBetween: 30,
-//            },
-//            768: {
-//                slidesPerView: 5,
-//                spaceBetween: 20,
-//            },
-//            640: {
-//                slidesPerView: 4,
-//                spaceBetween: 20,
-//            },
-//            320: {
-//                slidesPerView: 3,
-//                spaceBetween: 10,
-//            }
-//        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+    // screen onchange
+    $(window).resize(function(){
+        if(!IsPC()){
+            var res= $('#dg-container .dg-wrapper a');
+            res.parent().css('height',res.height());
+        }
     });
     var swiperObj={
         slidesPerView: 2.5,
@@ -490,5 +501,13 @@
     $('.category .scope-slider label.next-btn').click(function () {
 
         $(this).parent().find('.swiper-button-next').click();
+    });
+    //category a tag delay 0.3s jump
+    $('.category .scope .title a').attr('onclick','return false').on('click',function () {
+        var res=$(this).attr('href');
+        setTimeout(function () {
+            location.href='/'+res;
+        },300)
+
     });
 </script>

@@ -32,11 +32,19 @@
     padding: 0 40px;
   }
   .category .scope .title {
+    position: relative;
     overflow: hidden;
     padding: 23px 0 25px 0;
   }
   .category .scope .title p {
+    float: left;
     margin-top: 5px;
+  }
+  .category .scope .title a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
   }
   .category .scope .scope-slider {
     position: relative;
@@ -62,20 +70,19 @@
     width: 100%;
     left: 0;
     bottom: 0;
+    padding: 7% 0;
     background: rgba(0, 0, 0, 0.8);
   }
   .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide a p.text img {
     position: absolute;
-    width: auto;
+    width: 15%;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
   }
   .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide a p.text span {
     display: block;
-    font-size: 30px;
-    height: 80px;
-    line-height: 80px;
+    font-size: 24px;
   }
   .category .scope .scope-slider .swiper-container .swiper-button-next {
     display: none;
@@ -85,8 +92,8 @@
   }
   .category .scope .scope-slider label {
     position: absolute;
-    width: 63px;
-    height: 62px;
+    width: 66px;
+    height: 66px;
     top: 50%;
     z-index: 999;
     cursor: pointer;
@@ -96,9 +103,15 @@
     left: -16px;
     background: url("../../images/banner/prev.png") no-repeat center;
   }
+  .category .scope .scope-slider .prev-btn:active {
+    background: url("../../images/banner/prev-g.png");
+  }
   .category .scope .scope-slider .next-btn {
     right: -16px;
-    background: url("../../images/banner/prev.png") no-repeat center;
+    background: url("../../images/banner/next.png") no-repeat center;
+  }
+  .category .scope .scope-slider .next-btn:active {
+    background: url("../../images/banner/next-g.png");
   }
   .hot-videos {
     background: #35C2F7;

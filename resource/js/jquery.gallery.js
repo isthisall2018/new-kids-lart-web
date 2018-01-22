@@ -8,19 +8,14 @@
  * Date: Mon Jan 30 2012
  */
 var pageItems='';
-for (var i=0; i<$('#dg-container .dg-wrapper a').length; i++){
+for (var i=0; i< $('#dg-container .dg-wrapper a').length; i++){
     pageItems+='<li></li>';
 }
-$('#dg-container ul').append(pageItems);
+$('#dg-container .page-circle').append(pageItems);
 
 (function( $, undefined ) {
-	
-	/*
-	 * Gallery object.
-	 */
+
 	$.Gallery 				= function( options, element ) {
-		console.log(this)
-	
 		this.$el	= $( element );
 		this._init( options );
 		

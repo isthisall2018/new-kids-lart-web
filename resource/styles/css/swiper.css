@@ -183,8 +183,6 @@
   cursor: pointer;
   transform: translateY(-50%);
   background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -194,13 +192,13 @@
 }
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  background-image: url("../../images/banner/prev.png");
+  background: url("../../images/banner/prev.png") no-repeat center;
   left: 10px;
   right: auto;
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  background-image: url("../../images/banner/prev.png");
+  background: url("../../images/banner/prev.png") no-repeat center;
   right: 10px;
   left: auto;
 }

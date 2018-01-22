@@ -5,7 +5,7 @@ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,s
 }
 body{
   font-family: "微软雅黑",Microsoft YaHei,Arial,sans-serif;
-  font-size:16px;
+  font-size: 16px;
   color: #fff;
   -webkit-text-size-adjust:100%
 }
@@ -42,11 +42,16 @@ input,textarea{outline: none;}
     height: 60px;
     line-height: 60px;
     font-size: 27px;
-    background: #F5BF07;
+    background: #F36F21;
+    border-bottom: 5px solid #BF5313;
     border-radius: 10px;
-    box-shadow: 0 5px 5px #BF5313;
-    &:hover{
-        background: #d1a616;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    //&:hover{
+    //    background: #d1a616;
+    //}
+    &:active{
+        border-bottom-width: 0;
     }
 }
 .btn-lg{
@@ -65,11 +70,6 @@ input,textarea{outline: none;}
 }
 
 @media (min-width: 1024px){
-    .container{
-        width: 90%;
-        margin: 0 auto;
-    }
-    //head
     .header{
         background: #439539;
         .header-kids{
@@ -119,6 +119,74 @@ input,textarea{outline: none;}
             }
             .login{
                 margin-top: 36px;
+                a{
+                    line-height: 57px;
+                    font-size: 36px;
+                    background: #F5BF07;
+                    box-shadow: 0 5px 5px #D59C12;
+                    &:hover{
+                        background: #e1b41b;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    a,img,button,span,label,input,textarea{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+    //head
+    .header{
+        background: #439539;
+        .header-kids{
+            height: 132px;
+            .navBar{
+                height: 90px;
+                .logo{
+                    float: left;
+                    margin: 26px 40px 0 40px;
+                    a{
+                        display: block;
+                        img{
+                            height: 80px;
+                        }
+                    }
+                }
+                .nav-link{
+                    float: left;
+                    li{
+                        float: left;
+                        a{
+                            display: block;
+                            height: 132px;
+                            &:hover{
+                                background: #fff;
+                                color: #007130;
+                            }
+                            .nav-icon{
+                                display: table-cell;
+                                width: 132px;
+                                height: 74px;
+                                text-align: center;
+                                vertical-align: bottom;
+                                img{
+                                    height: auto;
+                                }
+                            }
+                            span{
+                                display: block;
+                                margin-top: 8px;
+                                font-size:24px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .login{
+                margin: 36px 23px 0 0;
                 a{
                     line-height: 57px;
                     font-size: 36px;
@@ -136,96 +204,77 @@ input,textarea{outline: none;}
         background: #007130;
         .swiper-container {
             width: 100%;
-            height: 152px;
-            .swiper-button-next{
-                width: 68px;
-                top: 0;
-                right: 0;
-                height: 100%;
-                background: url("../../images/nav-r-bg.png") no-repeat;
-            }
-            .swiper-button-prev{
-
-            }
-        }
-    }
-}
-
-
-
-@media (min-width: 768px) and (max-width: 1024px){
-    .container{
-        width: 90%;
-        margin: 0 auto;
-    }
-    //head
-    .header{
-        background: #439539;
-        .header-kids{
-            height: 132px;
-            .navBar{
-                height: 90px;
-                .logo{
-                    float: left;
-                    margin: 26px 40px 0 0;
+            padding: 20px 56px;
+            box-sizing: border-box;
+            .swiper-wrapper{
+                .swiper-slide{
                     a{
                         display: block;
-                        img{
-                            height: 80px;
-                        }
-                    }
-                }
-                .nav-link{
-                    float: left;
-                    li{
-                        float: left;
-                        a{
-                            display: block;
-                            height: 132px;
-                            &:hover{
-                                background: #fff;
-                                color: #007130;
-                            }
-                            .nav-icon{
-                                display: table-cell;
-                                width: 132px;
-                                height: 74px;
-                                text-align: center;
-                                vertical-align: bottom;
-                                img{
-                                    height: auto;
-                                }
-                            }
-                            span{
-                                display: block;
-                                margin-top: 8px;
-                                font-size:24px;
-                                text-align: center;
-                            }
-                        }
                     }
                 }
             }
-            .login{
-                margin-top: 36px;
-                a{
-                    line-height: 57px;
-                    font-size: 36px;
-                    background: #F5BF07;
-                    box-shadow: 0 5px 5px #D59C12;
-                    &:hover{
-                        background: #e1b41b;
+            .page-Arrows{
+                span{
+                    width: 68px;
+                    top: 0;
+                    height: 100%;
+                    transform: none;
+                    text-align: center;
+                    -webkit-background-size: cover;
+                    background-size: cover;
+                    i{
+                        position: absolute;
+                        width: 21px;
+                        height: 38px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                .swiper-button-next{
+                    right: -1px;
+                    background: url("../../images/nav-r-bg.png") no-repeat center;
+                    .i-arrows{
+                        right: 20px;
+                        background: url("../../images/right-angle.png") no-repeat center;
+                        &:active{
+                            background: url("../../images/right-angle-g.png");
+                        }
+                    }
+                }
+                .swiper-button-prev{
+                    left: -1px;
+                    background: url("../../images/nav-l-bg.png") no-repeat center;
+                    .i-arrows{
+                        left: 18px;
+                        background: url("../../images/left-angle.png") no-repeat center;
+                        &:active{
+                            background: url("../../images/left-angle-g.png");
+                        }
                     }
                 }
             }
         }
-    }
-    //nav
-    .kids-nav{
-        background: #007130;
     }
 }
 
 @media (max-width: 768px){
 
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .header {
+        .header-kids{
+            .navBar{
+                .nav-link{
+                    li{
+                        a{
+                            .nav-icon{
+                                width: 104px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
