@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Title</title>
     <link rel="stylesheet" href="./resource/styles/css/common.css">
@@ -50,7 +50,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="lesson.html">
                             <i class="nav-icon">
                                 <img src="resource/images/course.png" alt="course">
                             </i>
@@ -141,7 +141,8 @@
         </div>
         <script type="text/javascript">
             var swiperNav = new Swiper('#topNav', {
-                spaceBetween: 20,
+                slidesPerView: 9,
+                spaceBetween: 30,
                 slidesPerGroup: 3,
                 loop: false,
                 loopFillGroupWithBlank: true,
@@ -151,6 +152,14 @@
                     clickable: true,
                 },
                 breakpoints: {
+                    1920:{
+                        slidesPerView: 10,
+                        spaceBetween: 30,
+                    },
+                    1200:{
+                        slidesPerView: 8,
+                        spaceBetween: 30,
+                    },
                     1024: {
                         slidesPerView: 7,
                         spaceBetween: 20,
@@ -179,7 +188,7 @@
     </div>
     <!--banner-->
     <div class="banner">
-        <div id="dg-container" class="dg-container">
+        <div id="dg-container" class="dg-container container">
             <div class="dg-wrapper">
                 <a href="#">
                     <p class="img_part">
@@ -234,7 +243,7 @@
     </div>
     <!--greatest games-->
     <div class="category best-games">
-        <div class="scope">
+        <div class="scope container">
             <div class="title">
                 <p>
                     <img src="resource/images/best-games.png">
@@ -290,7 +299,7 @@
     </div>
     <!--hot videos-->
     <div class="category hot-videos">
-        <div class="scope">
+        <div class="scope container">
             <div class="title">
                 <p>
                     <img src="resource/images/hot-videos.png">
@@ -346,7 +355,7 @@
     </div>
     <!--art gallery-->
     <div class="category art-gallery">
-        <div class="scope">
+        <div class="scope container">
             <div class="title">
                 <p>
                     <img src="resource/images/art-gallery.png">
@@ -402,7 +411,7 @@
     </div>
     <!--creative course-->
     <div class="category creative-course">
-        <div class="scope">
+        <div class="scope container">
             <div class="title">
                 <p>
                     <img src="resource/images/creative-course.png">
@@ -490,6 +499,9 @@
             prevEl: '.swiper-button-prev',
         },
     };
+    if (IsPC()){
+        swiperObj.slidesPerView=3;
+    }
     var swiperGames = new Swiper('#games',swiperObj);
     var swiperVideo = new Swiper('#videos',swiperObj);
     var swiperGallery = new Swiper('#gallery',swiperObj);

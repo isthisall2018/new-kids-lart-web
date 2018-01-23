@@ -1,0 +1,78 @@
+.lessons {
+  background: #c4d023;
+}
+.lessons .lessons-title {
+  padding: 40px 0;
+  text-align: center;
+}
+.lessons .lessons-title img {
+  width: auto;
+}
+.lessons .les-wrap {
+  padding: 0 40px;
+  zoom: 1;
+}
+.lessons .les-wrap .items {
+  float: left;
+  width: 31%;
+  margin: 0 0 3.5% 3.5%;
+}
+.lessons .les-wrap .items a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.lessons .les-wrap .items a .part-img img {
+  width: 100%;
+}
+.lessons .les-wrap .items a .text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+.lessons .les-wrap .items a .text img {
+  position: absolute;
+  width: 40px;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+}
+.lessons .les-wrap .items a .text span {
+  display: block;
+  width: 100%;
+  padding: 18px 0 12px 58px;
+  font-size: 24px;
+}
+.lessons .les-wrap .items:nth-of-type(3n+1) {
+  margin-left: 0;
+}
+.lessons .les-wrap .more a {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+.lessons .les-wrap .more a .part-img img {
+  visibility: hidden;
+}
+.lessons .les-wrap .more a .text {
+  bottom: 50%;
+  font-size: 30px;
+  background: transparent;
+  transform: translateY(50%);
+}
+.lessons .les-wrap .more a .text:hover {
+  text-decoration: underline;
+}
+.lessons .les-wrap .more a .text:active {
+  text-decoration: underline;
+}
+.craft {
+  background: #ae3f90;
+}
+.paper-cut {
+  background: #fcc12f;
+}

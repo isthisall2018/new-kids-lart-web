@@ -82,7 +82,7 @@
 	outline: none;
 }
 .dg-container nav .dg-prev {
-	left: 4%;
+	left: 3%;
 	background: transparent url(../../images/banner/prev.png) no-repeat center;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .dg-container nav .dg-next {
-	right: 4%;
+	right: 3%;
 	background: transparent url(../../images/banner/next.png) no-repeat center;
 }
 

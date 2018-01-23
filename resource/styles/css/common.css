@@ -7,7 +7,9 @@ h3,
 h4,
 h5,
 h6,
+div,
 p,
+span,
 th,
 td,
 dl,
@@ -66,6 +68,12 @@ p {
 .fl {
   float: left;
 }
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
 textarea {
   overflow: auto;
   resize: none;
@@ -113,11 +121,26 @@ textarea {
   padding: 5px 10px;
   border-radius: 4px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  a,
+  img,
+  button,
+  span,
+  label,
+  input,
+  textarea {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
   .header {
     background: #439539;
   }
   .header .header-kids {
+    width: 90%;
+    margin: 0 auto;
     height: 132px;
   }
   .header .header-kids .navBar {
@@ -125,7 +148,7 @@ textarea {
   }
   .header .header-kids .navBar .logo {
     float: left;
-    margin: 26px 40px 0 0;
+    margin: 26px 40px 0 40px;
   }
   .header .header-kids .navBar .logo a {
     display: block;
@@ -164,7 +187,7 @@ textarea {
     text-align: center;
   }
   .header .header-kids .login {
-    margin-top: 36px;
+    margin: 36px 23px 0 0;
   }
   .header .header-kids .login a {
     line-height: 57px;
@@ -174,6 +197,55 @@ textarea {
   }
   .header .header-kids .login a:hover {
     background: #e1b41b;
+  }
+  .kids-nav {
+    background: #007130;
+  }
+  .kids-nav .swiper-container {
+    width: 100%;
+    padding: 20px 56px;
+    box-sizing: border-box;
+  }
+  .kids-nav .swiper-container .swiper-wrapper .swiper-slide a {
+    display: block;
+  }
+  .kids-nav .swiper-container .page-Arrows span {
+    width: 68px;
+    top: 0;
+    height: 100%;
+    transform: none;
+    text-align: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .kids-nav .swiper-container .page-Arrows span i {
+    position: absolute;
+    width: 21px;
+    height: 38px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .kids-nav .swiper-container .page-Arrows .swiper-button-next {
+    right: -1px;
+    background: url("../../images/nav-r-bg.png") no-repeat center;
+  }
+  .kids-nav .swiper-container .page-Arrows .swiper-button-next .i-arrows {
+    right: 20px;
+    background: url("../../images/right-angle.png") no-repeat center;
+  }
+  .kids-nav .swiper-container .page-Arrows .swiper-button-next .i-arrows:active {
+    background: url("../../images/right-angle-g.png");
+  }
+  .kids-nav .swiper-container .page-Arrows .swiper-button-prev {
+    left: -1px;
+    background: url("../../images/nav-l-bg.png") no-repeat center;
+  }
+  .kids-nav .swiper-container .page-Arrows .swiper-button-prev .i-arrows {
+    left: 18px;
+    background: url("../../images/left-angle.png") no-repeat center;
+  }
+  .kids-nav .swiper-container .page-Arrows .swiper-button-prev .i-arrows:active {
+    background: url("../../images/left-angle-g.png");
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {

@@ -1,4 +1,4 @@
-body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{
+body,ol,ul,h1,h2,h3,h4,h5,h6,div,p,span,th,td,dl,dd,form,fieldset,legend,input,textarea,select{
   margin:0;
   padding:0;
   box-sizing: border-box;
@@ -25,6 +25,15 @@ p{word-wrap:break-word}
 
 .fr{float: right;}
 .fl{float: left;}
+.clearfix{
+    &:after{
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
 
 textarea{overflow:auto;resize:none;}
 input{height: 40px;padding: 10px 20px;}
@@ -69,16 +78,24 @@ input,textarea{outline: none;}
   border-radius: 4px;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1025px){
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    a,img,button,span,label,input,textarea{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+    //head
     .header{
         background: #439539;
         .header-kids{
+            width: 90%;
+            margin: 0 auto;
             height: 132px;
             .navBar{
                 height: 90px;
                 .logo{
                     float: left;
-                    margin: 26px 40px 0 0;
+                    margin: 26px 40px 0 40px;
                     a{
                         display: block;
                         img{
@@ -118,7 +135,7 @@ input,textarea{outline: none;}
                 }
             }
             .login{
-                margin-top: 36px;
+                margin: 36px 23px 0 0;
                 a{
                     line-height: 57px;
                     font-size: 36px;
@@ -126,6 +143,62 @@ input,textarea{outline: none;}
                     box-shadow: 0 5px 5px #D59C12;
                     &:hover{
                         background: #e1b41b;
+                    }
+                }
+            }
+        }
+    }
+    //nav
+    .kids-nav{
+        background: #007130;
+        .swiper-container {
+            width: 100%;
+            padding: 20px 56px;
+            box-sizing: border-box;
+            .swiper-wrapper{
+                .swiper-slide{
+                    a{
+                        display: block;
+                    }
+                }
+            }
+            .page-Arrows{
+                span{
+                    width: 68px;
+                    top: 0;
+                    height: 100%;
+                    transform: none;
+                    text-align: center;
+                    -webkit-background-size: cover;
+                    background-size: cover;
+                    i{
+                        position: absolute;
+                        width: 21px;
+                        height: 38px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                .swiper-button-next{
+                    right: -1px;
+                    background: url("../../images/nav-r-bg.png") no-repeat center;
+                    .i-arrows{
+                        right: 20px;
+                        background: url("../../images/right-angle.png") no-repeat center;
+                        &:active{
+                            background: url("../../images/right-angle-g.png");
+                        }
+                    }
+                }
+                .swiper-button-prev{
+                    left: -1px;
+                    background: url("../../images/nav-l-bg.png") no-repeat center;
+                    .i-arrows{
+                        left: 18px;
+                        background: url("../../images/left-angle.png") no-repeat center;
+                        &:active{
+                            background: url("../../images/left-angle-g.png");
+                        }
                     }
                 }
             }
