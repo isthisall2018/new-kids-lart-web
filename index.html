@@ -192,7 +192,7 @@
             <div class="dg-wrapper">
                 <a href="#">
                     <p class="img_part">
-                        <img src="resource/images/banner/banner1.png">
+                        <img src="resource/images/k1.png">
                     </p>
                     <p class="title">
                         <img src="resource/images/i-gallery.png">
@@ -201,7 +201,7 @@
                 </a>
                 <a href="#">
                     <p class="img_part">
-                        <img src="resource/images/banner/banner1.png">
+                        <img src="resource/images/k2.png">
                     </p>
                     <p class="title">
                         <img src="resource/images/i-gallery.png">
@@ -210,7 +210,7 @@
                 </a>
                 <a href="#">
                     <p class="img_part">
-                        <img src="resource/images/banner/banner2.png">
+                        <img src="resource/images/k3.png">
                     </p>
                     <p class="title">
                         <img src="resource/images/i-video.png">
@@ -219,7 +219,7 @@
                 </a>
                 <a href="#">
                     <p class="img_part">
-                        <img src="resource/images/banner/banner3.png">
+                        <img src="resource/images/k4.png">
                     </p>
                     <p class="title">
                         <img src="resource/images/i-game.png">
@@ -309,6 +309,28 @@
             <div class="scope-slider">
                 <div class="swiper-container" id="videos">
                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="video.html">
+                                <p class="image">
+                                    <img src="resource/images/k2.png">
+                                </p>
+                                <p class="text">
+                                    <img src="resource/images/i-video.png">
+                                    <span>儿童艺术展</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="video.html">
+                                <p class="image">
+                                    <img src="resource/images/k2.png">
+                                </p>
+                                <p class="text">
+                                    <img src="resource/images/i-video.png">
+                                    <span>儿童艺术展</span>
+                                </p>
+                            </a>
+                        </div>
                         <div class="swiper-slide">
                             <a href="video.html">
                                 <p class="image">
@@ -483,22 +505,6 @@
             res.parent().css('height',res.height());
         }
     });
-    var swiperObj={
-        slidesPerView: 2.5,
-        spaceBetween: 40,
-        slidesPerGroup: 1,
-        loop: false,
-        loopFillGroupWithBlank: true,
-        freeMode: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    };
     if (IsPC()){
         swiperObj.slidesPerView=3;
     }

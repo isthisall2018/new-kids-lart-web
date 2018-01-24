@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>watch</title>
+    <link rel="stylesheet" href="./resource/styles/css/common.css">
+    <link rel="stylesheet" href="./resource/styles/css/kids_video.css">
+    <link rel="stylesheet" href="./resource/styles/css/swiper.css">
+    <link rel="stylesheet" href="./resource/styles/css/watch.css">
+    <script src="resource/js/common/common.js"></script>
+    <script src="resource/js/kids_video.js" type="text/javascript"></script>
+    <script src="resource/js/swiper.min.js"></script>
+
+</head>
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="header-kids container">
+            <div class="navBar fl">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="resource/images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="nav-link">
+                    <li>
+                        <a href="">
+                            <i class="nav-icon">
+                                <img src="resource/images/game.png" alt="game">
+                            </i>
+                            <span>游戏</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="nav-icon">
+                                <img src="resource/images/video.png" alt="TV">
+                            </i>
+                            <span>TV秀</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="nav-icon">
+                                <img src="resource/images/gallery.png" alt="gallery">
+                            </i>
+                            <span>展览</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="lesson.html">
+                            <i class="nav-icon">
+                                <img src="resource/images/course.png" alt="course">
+                            </i>
+                            <span>课程</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login fr">
+                <a href="login.html" class="btn kids-btn login-btn">
+                    <span>登录</span>
+                    <i>
+                        <img src="resource/images/login-user.png" alt="i-user">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--watch-->
+    <div class="watch">
+        <div class="video-wrap container">
+            <div class="kids-player">
+                <video id="kids-video" class="video-js vjs-fluid vjs-bigPlay-button" preload="none">
+                    <source src="http://img.ksbbs.com/asset/Mon_1703/05cacb4e02f9d9e.mp4" type="video/mp4"/>
+                </video>
+            </div>
+        </div>
+        <div class="scope-slider">
+            <div class="swiper-container" id="video-list">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k2.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-video.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k2.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-video.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k2.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-video.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k4.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-video.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="video.html">
+                            <p class="image">
+                                <img src="resource/images/k1.png">
+                            </p>
+                            <p class="text">
+                                <img src="resource/images/i-video.png">
+                                <span>儿童艺术展</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <!--add btn-->
+            <label class="prev-btn"></label>
+            <label class="next-btn"></label>
+        </div>
+    </div>
+</body>
+</html>
+<script src="resource/js/common/vjs-kids-common.js"></script>
+<script>
+    swiperObj.slidesPerView=3;
+    swiperObj.spaceBetween=0;
+    new Swiper('#video-list',swiperObj);
+</script>

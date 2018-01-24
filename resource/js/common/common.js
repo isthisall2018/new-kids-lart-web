@@ -7,3 +7,19 @@ function IsPC(){
     }
     return flag;
 }
+var swiperObj={
+    slidesPerView: 2.5,
+    spaceBetween: 40,
+    slidesPerGroup: 1,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    freeMode: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+};

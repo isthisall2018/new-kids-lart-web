@@ -1,0 +1,91 @@
+.watch{
+    padding: 44px 0 48px 0;
+    background: #c4d023;
+    .video-wrap{
+        padding: 0 40px;
+        .kids-player{
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            background: #000;
+        }
+    }
+    .scope-slider{
+        margin-top: 46px;
+        position: relative;
+        .swiper-container{
+            .swiper-wrapper{
+                position: relative;
+                padding-bottom: 5px;
+                .swiper-slide{
+
+                    padding: 0 20px;
+                    a{
+                        width: 100%;
+                        overflow: hidden;
+                        position: relative;
+                        border-radius: 10px;
+                        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+                        p.image{
+                            img{
+                                width: 100%;
+                                vertical-align: bottom;
+                            }
+                        }
+                        p.text{
+                            position: absolute;
+                            width: 100%;
+                            left: 0;
+                            bottom: 0;
+                            padding: 7% 0;
+                            background:rgba(0,0,0,0.8);
+                            img{
+                                position: absolute;
+                                width: 15%;
+                                left: 20px;
+                                top: 50%;
+                                transform: translateY(-50%);
+
+                            }
+                            span{
+                                display: block;
+                                font-size: 24px;
+                            }
+                        }
+
+                    }
+                }
+            }
+            .swiper-button-next{
+                display: none;
+            }
+            .swiper-button-prev{
+                display: none;
+            }
+        }
+        label{
+            position: absolute;
+            width: 66px;
+            height: 66px;
+            top: 50%;
+            z-index: 999;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+        .prev-btn{
+            left: -16px;
+            background: url("../../images/banner/prev.png") no-repeat center;
+            &:active{
+                background: url("../../images/banner/prev-g.png");
+            }
+        }
+        .next-btn{
+            right: -16px;
+            background: url("../../images/banner/next.png") no-repeat center;
+            &:active{
+                background: url("../../images/banner/next-g.png");
+            }
+        }
+
+    }
+}
