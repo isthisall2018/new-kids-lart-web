@@ -1,0 +1,120 @@
+@import "public";
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .banner {
+        .banner
+    }
+    .gallery{
+        background: #946DB0;
+        .g-title{
+            padding: 40px 0;
+            text-align: center;
+            img{
+                height: 50px;
+            }
+        }
+        .gallery-wrap{
+            padding: 0 40px;
+            .g-poster{
+                .items{
+                    width: 32%;
+                    float: left;
+                    margin-bottom: 2%;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    a{
+                        display: block;
+                        position: relative;
+                        p.image{
+                            img{
+                                width: 100%;
+                                vertical-align: bottom;
+                            }
+                        }
+                        p.text{
+                            position: absolute;
+                            width: 100%;
+                            left: 0;
+                            bottom: 0;
+                            padding: 7% 0 7% 18%;
+                            background:rgba(0,0,0,0.8);
+                            img{
+                                position: absolute;
+                                width: 15%;
+                                left: 6%;
+                                top: 50%;
+                                transform: translateY(-50%);
+
+                            }
+                            span{
+                                display: block;
+                                text-align: center;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+                .items-poster{
+                    width: 62%;
+                    margin-right: 2%;
+                    a{
+                        p.text{
+                            padding: 5.5% 0 6.5% 15%;
+                            img{
+                                width: 12%;
+                                left: 5%;
+                            }
+                            span{
+                                font-size: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    //banner
+    .banner {
+        background: #ae3f90;
+        padding: 44px 0 64px 0;
+        .dg-container {
+            width: 1200px;
+            padding: 0;
+            .dg-wrapper {
+                width: 662px;
+                a {
+                    width: 662px;
+                    .title {
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.8);
+                        img {
+                             position: absolute;
+                             width: auto;
+                             left: 52px;
+                             top: 50%;
+                             transform: translateY(-50%);
+                        }
+                        span {
+                            display: block;
+                            width: 100%;
+                            height: 90px;
+                            font-size: 30px;
+                            line-height: 90px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .page-circle {
+                bottom: -34px;
+            }
+        }
+    }
+
+}

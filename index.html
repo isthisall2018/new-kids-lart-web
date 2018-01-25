@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Title</title>
+    <title>首页</title>
     <link rel="stylesheet" href="./resource/styles/css/common.css">
     <link rel="stylesheet" href="./resource/styles/css/carousel.css">
     <link rel="stylesheet" href="./resource/styles/css/swiper.css">
     <link rel="stylesheet" href="./resource/styles/css/index.css">
+    <script src="resource/js/common/common.js"></script>
     <script type="text/javascript" src="resource/js/modernizr-carousel.js"></script>
     <script src="resource/js/jquery.min.js"></script>
-    <script src="resource/js/common/common.js"></script>
     <script src="resource/js/swiper.min.js"></script>
+    <script src="resource/js/jquery.gallery.js"></script>
 </head>
 <body>
     <!--header-->
@@ -233,13 +234,6 @@
             </nav>
             <ul class="page-circle"></ul>
         </div>
-        <script type="text/javascript">
-            //设置bannner轮播的高度
-            if(!IsPC()){
-                var res= $('#dg-container .dg-wrapper a');
-                res.parent().css('height',res.height());
-            }
-        </script>
     </div>
     <!--greatest games-->
     <div class="category best-games">
@@ -491,20 +485,23 @@
     <div class="footer"></div>
 </body>
 </html>
-<script src="resource/js/jquery.gallery.js"></script>
+
 <script>
     $('#dg-container').gallery({
         current: 0,
-//                autoplay: true,
+    //  autoplay: true,
         interval	: 3000
     });
     // screen onchange
+    function bannerAutoHeight () {
+        var res= $('#dg-container .dg-wrapper a');
+        return res.parent().css('height',res.height());
+    }
+    bannerAutoHeight ();
     $(window).resize(function(){
-        if(!IsPC()){
-            var res= $('#dg-container .dg-wrapper a');
-            res.parent().css('height',res.height());
-        }
+        bannerAutoHeight ();
     });
+
     if (IsPC()){
         swiperObj.slidesPerView=3;
     }
@@ -512,20 +509,21 @@
     var swiperVideo = new Swiper('#videos',swiperObj);
     var swiperGallery = new Swiper('#gallery',swiperObj);
     var swiperCourse = new Swiper('#course',swiperObj);
+
     //category click
-    $('.category .scope-slider label.prev-btn').click(function () {
-       $(this).parent().find('.swiper-button-prev').click();
+    $('.scope-slider label.prev-btn').click(function () {
+        $(this).parent().find('.swiper-button-prev').click();
     });
-    $('.category .scope-slider label.next-btn').click(function () {
+    $('.scope-slider label.next-btn').click(function () {
 
         $(this).parent().find('.swiper-button-next').click();
     });
+
     //category a tag delay 0.3s jump
     $('.category .scope .title a').attr('onclick','return false').on('click',function () {
         var res=$(this).attr('href');
         setTimeout(function () {
             location.href='/'+res;
         },300)
-
     });
 </script>

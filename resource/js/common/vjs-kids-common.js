@@ -4,7 +4,7 @@ var player = videojs("kids-video", {
     "autoplay": false,
     "preload": "auto",
     "loop": false,
-    "poster": "resource/images/k1.png",
+    "poster": "resource/images/kids-video/video-poster.jpg",
     controlBar: {
         captionsButton: false,
         chaptersButton: false,

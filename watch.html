@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./resource/styles/css/kids_video.css">
     <link rel="stylesheet" href="./resource/styles/css/swiper.css">
     <link rel="stylesheet" href="./resource/styles/css/watch.css">
-    <script src="resource/js/common/common.js"></script>
+    <script src="resource/js/jquery.min.js"></script>
+
     <script src="resource/js/kids_video.js" type="text/javascript"></script>
     <script src="resource/js/swiper.min.js"></script>
 
@@ -92,7 +93,7 @@
                             </p>
                         </a>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide current">
                         <a href="video.html">
                             <p class="image">
                                 <img src="resource/images/k2.png">
@@ -142,15 +143,28 @@
                 <div class="swiper-button-prev"></div>
             </div>
             <!--add btn-->
-            <label class="prev-btn"></label>
-            <label class="next-btn"></label>
+            <label class="prev-btn">
+                <span></span>
+            </label>
+            <label class="next-btn">
+                <span></span>
+            </label>
         </div>
     </div>
 </body>
 </html>
+<script src="resource/js/common/common.js"></script>
 <script src="resource/js/common/vjs-kids-common.js"></script>
-<script>
-    swiperObj.slidesPerView=3;
+<script type="text/javascript">
+    swiperObj.slidesPerView=2.73;
     swiperObj.spaceBetween=0;
     new Swiper('#video-list',swiperObj);
+    //category click
+    $('.scope-slider label.prev-btn span').click(function () {
+        $(this).parent().parent().find('.swiper-button-prev').click();
+    });
+    $('.scope-slider label.next-btn span').click(function () {
+        $(this).parent().parent().find('.swiper-button-next').click();
+    });
+
 </script>

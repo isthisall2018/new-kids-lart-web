@@ -1,3 +1,6 @@
+@import "public";
+
+
 .watch{
     padding: 44px 0 48px 0;
     background: #c4d023;
@@ -12,14 +15,14 @@
     }
     .scope-slider{
         margin-top: 46px;
+        padding: 0 60px;;
         position: relative;
+        background: #007130;
         .swiper-container{
             .swiper-wrapper{
                 position: relative;
-                padding-bottom: 5px;
                 .swiper-slide{
-
-                    padding: 0 20px;
+                    padding: 40px 20px;
                     a{
                         width: 100%;
                         overflow: hidden;
@@ -37,12 +40,12 @@
                             width: 100%;
                             left: 0;
                             bottom: 0;
-                            padding: 7% 0;
+                            padding: 7% 0 7% 21%;
                             background:rgba(0,0,0,0.8);
                             img{
                                 position: absolute;
                                 width: 15%;
-                                left: 20px;
+                                left: 6%;
                                 top: 50%;
                                 transform: translateY(-50%);
 
@@ -55,6 +58,9 @@
 
                     }
                 }
+                .current{
+                    background: #115930;
+                }
             }
             .swiper-button-next{
                 display: none;
@@ -65,27 +71,52 @@
         }
         label{
             position: absolute;
-            width: 66px;
-            height: 66px;
+            width: 60px;
+            height: 100%;
             top: 50%;
-            z-index: 999;
-            cursor: pointer;
+            z-index: 998;
+            background: #007130;
             transform: translateY(-50%);
+            span{
+                position: absolute;
+                width: 100%;
+                height: 38px;
+                top: 50%;
+                z-index: 9989;
+                cursor: pointer;
+                transform: translateY(-50%);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
         }
         .prev-btn{
-            left: -16px;
-            background: url("../../images/banner/prev.png") no-repeat center;
-            &:active{
-                background: url("../../images/banner/prev-g.png");
+            left: 0;
+            box-shadow: 5px 0px 7.6px 0.4px rgba(0, 0, 0, 0.35);
+            span{
+                left: 0;
+                background-image: url("../../images/left-angle.png");
+                &:active{
+                    background-image: url("../../images/left-angle-g.png");
+                }
             }
         }
         .next-btn{
-            right: -16px;
-            background: url("../../images/banner/next.png") no-repeat center;
-            &:active{
-                background: url("../../images/banner/next-g.png");
+            right: 0;
+            box-shadow: -5px 0px 7.6px 0.4px rgba(0, 0, 0, 0.35);
+            //background: url("../../images/watch-right.png") no-repeat center;
+            span{
+                background-image: url("../../images/right-angle.png");
+                &:active{
+                    background-image: url("../../images/right-angle-g.png");
+                }
             }
         }
 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .watch .scope-slider .swiper-container .swiper-wrapper .swiper-slide a p.text span {
+        font-size: 18px;
     }
 }
