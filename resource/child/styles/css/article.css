@@ -68,8 +68,9 @@
     width: 31%;
     float: left;
     margin: 0 0 45px 3.5%;
-    border-radius: 10px;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   .about-article .about-container .article-menu .items a {
     display: block;
@@ -104,5 +105,15 @@
   }
   .kids-nav {
     background: #45B6EB;
+  }
+  .kids-nav .swiper-container .page-Arrows .swiper-button-next {
+    background: url("../../images/nav-r-blue.png") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .kids-nav .swiper-container .page-Arrows .swiper-button-prev {
+    background: url("../../images/nav-l-blue.png") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
 }
