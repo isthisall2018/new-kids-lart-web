@@ -17,46 +17,11 @@
             padding: 0 40px;
             .g-poster{
                 .items{
-                    width: 32%;
-                    float: left;
-                    margin-bottom: 2%;
-                    border-radius: 10px;
-                    overflow: hidden;
-                    a{
-                        display: block;
-                        position: relative;
-                        p.image{
-                            img{
-                                width: 100%;
-                                vertical-align: bottom;
-                            }
-                        }
-                        p.text{
-                            position: absolute;
-                            width: 100%;
-                            left: 0;
-                            bottom: 0;
-                            padding: 7% 0 7% 18%;
-                            background:rgba(0,0,0,0.8);
-                            img{
-                                position: absolute;
-                                width: 15%;
-                                left: 6%;
-                                top: 50%;
-                                transform: translateY(-50%);
-
-                            }
-                            span{
-                                display: block;
-                                text-align: center;
-                                font-size: 24px;
-                            }
-                        }
-                    }
+                    .g-items(0)
                 }
                 .items-poster{
-                    width: 62%;
-                    margin-right: 2%;
+                    width: 65.5%;
+                    margin-right: 3.5%;
                     a{
                         p.text{
                             padding: 5.5% 0 6.5% 15%;
@@ -69,6 +34,14 @@
                             }
                         }
                     }
+                }
+            }
+            .g-items{
+                .items{
+                    .g-items()
+                }
+                .items:nth-of-type(3n+1){
+                    margin-left: 0;
                 }
             }
         }
@@ -118,3 +91,18 @@
     }
 
 }
+
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .gallery .gallery-wrap .g-poster .items-poster a p.text {
+        padding: 3.5% 0 4.5% 11%;
+    }
+    .gallery .gallery-wrap .g-poster .items-poster a p.text img {
+        width: 10%;
+        left: 5%;
+    }
+    .gallery .gallery-wrap .g-poster .items-poster a p.text span {
+        font-size: 28px;
+    }
+}
+

@@ -1,0 +1,84 @@
+@import "public";
+
+.h2(@mt: 36px,@mb: 22px,@font-size: 36px,@text-align: center){
+    font-weight: bold;
+    font-size: @font-size;
+    text-align: @text-align;
+    padding: @mt 0 @mb 0;
+}
+.p(@fz: 24px,@lh: 36px){
+    font-size: @fz;
+    line-height: @lh;
+    margin-bottom: 32px;
+    text-indent: 2em;
+    img{
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .article{
+        background: #946DB0;
+        .article-wrap{
+            padding: 0 40px;
+            .video-describe{
+                h2{
+                    .h2(@font-size: 40px)
+                }
+                .kids-player{
+                    .kids-player()
+                }
+            }
+            .article-content{
+                h2{
+                    .h2()
+                }
+                p{
+                    .p()
+                }
+            }
+            .share{
+                padding-bottom: 40px;
+                text-align: center;
+                i{
+                    display: inline-block;
+                    width: 87px;
+                    height: 88px;
+                    background: url("../../images/share.png") no-repeat center;
+                }
+                p{
+                    margin-top: 18px;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                &:active{
+                    i{
+                        background: url("../../images/share-bg.png") no-repeat center;
+                    }
+                }
+            }
+        }
+    }
+    .about-article{
+        background: #6F349C;
+        .about-container{
+            padding: 0 40px;
+            h2{
+                .h2(@text-align: left)
+            }
+            .article-menu{
+                .items{
+                    .g-items(@margin-bottom: 45px)
+                }
+                .items:first-child{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .kids-nav{
+        background: #45B6EB;
+    }
+}
