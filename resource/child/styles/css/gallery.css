@@ -167,6 +167,108 @@
   .banner .dg-container .page-circle {
     bottom: -34px;
   }
+  .gallery {
+    background: #946DB0;
+  }
+  .gallery .g-title {
+    padding: 40px 0;
+    text-align: center;
+  }
+  .gallery .g-title img {
+    height: 50px;
+  }
+  .gallery .gallery-wrap {
+    padding: 0 40px;
+  }
+  .gallery .gallery-wrap .g-poster .items {
+    width: 31%;
+    float: left;
+    margin: 0 0 3.5% 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .gallery .gallery-wrap .g-poster .items a {
+    display: block;
+    position: relative;
+  }
+  .gallery .gallery-wrap .g-poster .items a p.image img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+  .gallery .gallery-wrap .g-poster .items a p.text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 7% 0 7% 18%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .gallery .gallery-wrap .g-poster .items a p.text img {
+    position: absolute;
+    width: 15%;
+    left: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .gallery .gallery-wrap .g-poster .items a p.text span {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+  }
+  .gallery .gallery-wrap .g-poster .items-poster {
+    width: 65.5%;
+    margin-right: 3.5%;
+  }
+  .gallery .gallery-wrap .g-poster .items-poster a p.text {
+    padding: 5.5% 0 6.5% 15%;
+  }
+  .gallery .gallery-wrap .g-poster .items-poster a p.text img {
+    width: 12%;
+    left: 5%;
+  }
+  .gallery .gallery-wrap .g-poster .items-poster a p.text span {
+    font-size: 50px;
+  }
+  .gallery .gallery-wrap .g-items .items {
+    width: 31%;
+    float: left;
+    margin: 0 0 3.5% 3.5%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .gallery .gallery-wrap .g-items .items a {
+    display: block;
+    position: relative;
+  }
+  .gallery .gallery-wrap .g-items .items a p.image img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+  .gallery .gallery-wrap .g-items .items a p.text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 7% 0 7% 18%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .gallery .gallery-wrap .g-items .items a p.text img {
+    position: absolute;
+    width: 15%;
+    left: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .gallery .gallery-wrap .g-items .items a p.text span {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+  }
+  .gallery .gallery-wrap .g-items .items:nth-of-type(3n+1) {
+    margin-left: 0;
+  }
 }
 @media (min-width: 768px) and (max-width: 850px) {
   .gallery .gallery-wrap .g-poster .items-poster a p.text {
