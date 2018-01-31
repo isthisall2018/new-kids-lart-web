@@ -267,8 +267,31 @@
             </div>
 
         </div>
+        <!--arrow-->
+        <div class="arrow-btn">
+            <i class="arrow-icon"></i>
+        </div>
     </div>
 </body>
     <script src="resource/child/js/common/common.js"></script>
     <script src="resource/child/js/common/vjs-kids-common.js"></script>
 </html>
+<script>
+    $(function () {
+        var toggle=true;
+        $('.arrow-btn').click(function () {
+            var _this=$(this);
+            if(toggle){
+                _this.parent().addClass('open-active').find('.series-videos').show();
+                toggle=false;
+            }else {
+                _this.parent().removeClass('open-active');
+                setTimeout(function () {
+                    _this.prev().hide();
+                },600);
+                toggle=true;
+            }
+        });
+    });
+
+</script>
