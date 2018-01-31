@@ -177,8 +177,8 @@
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  width: 63px;
-  height: 62px;
+  width: 66px;
+  height: 66px;
   z-index: 999;
   cursor: pointer;
   transform: translateY(-50%);
@@ -193,13 +193,13 @@
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
   background: url("../../images/banner/prev.png") no-repeat center;
-  left: 10px;
+  left: 15px;
   right: auto;
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   background: url("../../images/banner/prev.png") no-repeat center;
-  right: 10px;
+  right: 15px;
   left: auto;
 }
 .swiper-button-prev.swiper-button-white,
@@ -624,4 +624,8 @@ button.swiper-pagination-bullet {
 .swiper-container-coverflow .swiper-wrapper {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px;
+}
+
+.banner  .swiper-slide-active,.banner  .swiper-slide-prev,.banner  .swiper-slide-next{
+  visibility: visible !important;
 }

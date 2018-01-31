@@ -6,14 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>首页</title>
     <link rel="stylesheet" href="./resource/child/styles/css/common.css">
-    <link rel="stylesheet" href="./resource/child/styles/css/carousel.css">
     <link rel="stylesheet" href="./resource/child/styles/css/swiper.css">
     <link rel="stylesheet" href="./resource/child/styles/css/index.css">
     <script src="resource/child/js/common/common.js"></script>
-    <script type="text/javascript" src="resource/child/js/modernizr-carousel.js"></script>
     <script src="resource/child/js/jquery.min.js"></script>
     <script src="resource/child/js/swiper.min.js"></script>
-    <script src="resource/child/js/jquery.gallery.js"></script>
 </head>
 <body>
     <!--header-->
@@ -189,46 +186,47 @@
     </div>
     <!--banner-->
     <div class="banner">
-        <div id="dg-container" class="dg-container container">
-            <div class="dg-wrapper">
-                <a href="#">
-                    <p class="img_part">
-                        <img src="resource/child/images/banner/banner1.png">
-                    </p>
-                    <p class="title">
-                        <img src="resource/child/images/i-gallery.png">
-                        <span>儿童艺术展</span>
-                    </p>
-                </a>
-                <a href="#">
-                    <p class="img_part">
-                        <img src="resource/child/images/banner/banner2.png">
-                    </p>
-                    <p class="title">
-                        <img src="resource/child/images/i-gallery.png">
-                        <span>儿童艺术展</span>
-                    </p>
-                </a>
-                <a href="#">
-                    <p class="img_part">
-                        <img src="resource/child/images/banner/banner3.png">
-                    </p>
-                    <p class="title">
-                        <img src="resource/child/images/i-video.png">
-                        <span>儿童艺术展</span>
-                    </p>
-                </a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <p class="img_part">
+                            <img src="resource/child/images/banner/banner1.png">
+                        </p>
+                        <p class="title">
+                            <img src="resource/child/images/i-gallery.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <p class="img_part">
+                            <img src="resource/child/images/banner/banner3.png">
+                        </p>
+                        <p class="title">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <p class="img_part">
+                            <img src="resource/child/images/banner/banner2.png">
+                        </p>
+                        <p class="title">
+                            <img src="resource/child/images/i-gallery.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+
             </div>
-            <nav>
-                <span class="dg-prev"></span>
-                <span class="dg-next"></span>
-            </nav>
-            <ul class="page-circle">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
         </div>
+        <div class="bannerSwiper-pagination"></div>
+        <div class="bannerSwiper-button bannerSwiper-button-prev"></div>
+        <div class="bannerSwiper-button bannerSwiper-button-next"></div>
     </div>
     <!--greatest games-->
     <div class="category best-games">
@@ -481,12 +479,56 @@
 </body>
 </html>
 
-<script>
-    $('#dg-container').gallery({
-        current: 0,
-    //  autoplay: true,
-        interval	: 3000
-    });
+<script type="text/javascript">
+   var bannerSwiper = new Swiper('.banner .swiper-container', {
+        watchSlidesProgress: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 3,
+           autoplay: {
+               delay: 5000,//1秒切换一次
+           },
+        navigation: {
+            nextEl: '.bannerSwiper-button-next',
+            prevEl: '.bannerSwiper-button-prev',
+        },
+        pagination: {
+            el: '.bannerSwiper-pagination',
+            clickable: true,
+        },
+        on: {
+            progress: function(progress) {
+                var modify=1;
+                for (i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides.eq(i);
+                    var slideProgress = this.slides[i].progress;
+
+                    if (Math.abs(slideProgress) > 1) {
+                        modify = (Math.abs(slideProgress) - 1) * 0.4 + 1;
+                    }
+                    translate = slideProgress * modify * 318 + 'px';
+                    scale = 1 - Math.abs(slideProgress) /7.5;
+                    zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                    slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                    slide.css('zIndex', zIndex);
+                    slide.css('opacity', 1);
+                    if (Math.abs(slideProgress) > 3) {
+                        slide.css('opacity', 0);
+                    }
+                }
+            },
+            setTransition: function(transition) {
+                for (var i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides.eq(i)
+                    slide.transition(transition);
+                }
+
+            }
+        }
+
+    })
+
     // screen onchange
     function bannerAutoHeight () {
         var res= $('#dg-container .dg-wrapper a');
@@ -510,7 +552,6 @@
         $(this).parent().find('.swiper-button-prev').click();
     });
     $('.scope-slider label.next-btn').click(function () {
-
         $(this).parent().find('.swiper-button-next').click();
     });
 

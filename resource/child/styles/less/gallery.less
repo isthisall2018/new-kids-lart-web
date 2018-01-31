@@ -49,43 +49,7 @@
 }
 @media (min-width: 1025px) {
     .banner {
-        background: #ae3f90;
-        padding: 44px 0 64px 0;
-        .dg-container {
-            width: 1200px;
-            padding: 0;
-            .dg-wrapper {
-                width: 662px;
-                a {
-                    width: 662px;
-                    .title {
-                        position: absolute;
-                        width: 100%;
-                        left: 0;
-                        bottom: 0;
-                        background: rgba(0, 0, 0, 0.8);
-                        img {
-                            position: absolute;
-                            width: auto;
-                            left: 52px;
-                            top: 50%;
-                            transform: translateY(-50%);
-                        }
-                        span {
-                            display: block;
-                            width: 100%;
-                            height: 90px;
-                            font-size: 30px;
-                            line-height: 90px;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
-            .page-circle {
-                bottom: -34px;
-            }
-        }
+        .banner()
     }
     .gallery{
         background: #946DB0;
@@ -142,6 +106,17 @@
     }
     .gallery .gallery-wrap .g-poster .items-poster a p.text span {
         font-size: 28px;
+    }
+    .banner{
+        padding: 20px 40px;
+        .swiper-slide{
+            width: @wdth5 !important;
+            .img_part{
+                img{
+                    width: @wdth5 !important;
+                }
+            }
+        }
     }
 }
 

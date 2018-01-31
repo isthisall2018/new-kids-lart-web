@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>画廊</title>
+    <title>TV show</title>
     <link rel="stylesheet" href="resource/child/styles/css/common.css">
     <link rel="stylesheet" href="./resource/child/styles/css/swiper.css">
     <link rel="stylesheet" href="resource/child/styles/css/gallery.css">
@@ -67,54 +67,127 @@
             </div>
         </div>
     </div>
-    <!--banner-->
-    <div class="banner">
-        <div class="swiper-container">
+    <!--navigation-->
+    <div class="kids-nav">
+        <div class="swiper-container" id="topNav">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <a href="#">
-                        <p class="img_part">
-                            <img src="resource/child/images/banner/banner1.png">
-                        </p>
-                        <p class="title">
-                            <img src="resource/child/images/i-gallery.png">
-                            <span>儿童艺术展</span>
-                        </p>
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="#">
-                        <p class="img_part">
-                            <img src="resource/child/images/banner/banner3.png">
-                        </p>
-                        <p class="title">
-                            <img src="resource/child/images/i-video.png">
-                            <span>儿童艺术展</span>
-                        </p>
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="#">
-                        <p class="img_part">
-                            <img src="resource/child/images/banner/banner2.png">
-                        </p>
-                        <p class="title">
-                            <img src="resource/child/images/i-gallery.png">
-                            <span>儿童艺术展</span>
-                        </p>
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
                     </a>
                 </div>
-
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="video.html">
+                        <img src="resource/child/images/navbar1.png">
+                    </a>
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="page-Arrows">
+                <span class="swiper-button-next">
+                    <i class="i-arrows"></i>
+                </span>
+                <span class="swiper-button-prev">
+                    <i class="i-arrows"></i>
+                </span>
             </div>
         </div>
-        <div class="bannerSwiper-pagination"></div>
-        <div class="bannerSwiper-button bannerSwiper-button-prev"></div>
-        <div class="bannerSwiper-button bannerSwiper-button-next"></div>
+        <script type="text/javascript">
+            var swiperNav = new Swiper('#topNav', {
+                slidesPerView: 9,
+                spaceBetween: 30,
+                slidesPerGroup: 3,
+                loop: false,
+                loopFillGroupWithBlank: true,
+                freeMode: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    1920:{
+                        slidesPerView: 10,
+                        spaceBetween: 30,
+                    },
+                    1200:{
+                        slidesPerView: 8,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 7,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 7,
+                        spaceBetween: 20,
+                    },
+                    640: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                    320: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    }
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            // set navbar img height
+            $('#topNav .swiper-wrapper .swiper-slide a img').css({'width': '100%'});
+        </script>
     </div>
-    <!--gallery-->
-    <div class="gallery">
+    <!--tvShow-->
+    <div class="tvShow gallery">
         <div class="g-title">
-            <img src="resource/child/images/art-gallery.png">
+            <img src="resource/child/images/hot-videos.png">
         </div>
         <div class="gallery-wrap container">
             <div class="g-poster clearfix">
@@ -124,7 +197,7 @@
                             <img src="resource/child/images/gallery-p02.jpg">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -135,7 +208,7 @@
                             <img src="resource/child/images/gallery-p01.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -146,7 +219,7 @@
                             <img src="resource/child/images/gallery-p01.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -157,10 +230,10 @@
                 <div class="items">
                     <a href="#">
                         <p class="image">
-                            <img src="resource/child/images/gallery-p01.png">
+                            <img src="resource/child/images/k1.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -168,10 +241,10 @@
                 <div class="items">
                     <a href="#">
                         <p class="image">
-                            <img src="resource/child/images/gallery-p01.png">
+                            <img src="resource/child/images/k5.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -179,10 +252,10 @@
                 <div class="items">
                     <a href="#">
                         <p class="image">
-                            <img src="resource/child/images/gallery-p01.png">
+                            <img src="resource/child/images/k3.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -190,10 +263,10 @@
                 <div class="items">
                     <a href="#">
                         <p class="image">
-                            <img src="resource/child/images/gallery-p01.png">
+                            <img src="resource/child/images/k2.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -201,10 +274,10 @@
                 <div class="items">
                     <a href="#">
                         <p class="image">
-                            <img src="resource/child/images/gallery-p01.png">
+                            <img src="resource/child/images/k1.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -212,10 +285,10 @@
                 <div class="items">
                     <a href="#">
                         <p class="image">
-                            <img src="resource/child/images/gallery-p01.png">
+                            <img src="resource/child/images/k1.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -223,10 +296,10 @@
                 <div class="items">
                     <a href="#">
                         <p class="image">
-                            <img src="resource/child/images/gallery-p01.png">
+                            <img src="resource/child/images/k3.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -234,10 +307,10 @@
                 <div class="items">
                     <a href="#">
                         <p class="image">
-                            <img src="resource/child/images/gallery-p01.png">
+                            <img src="resource/child/images/k1.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -245,10 +318,43 @@
                 <div class="items">
                     <a href="#">
                         <p class="image">
-                            <img src="resource/child/images/gallery-p01.png">
+                            <img src="resource/child/images/k4.png">
                         </p>
                         <p class="text">
-                            <img src="resource/child/images/i-gallery.png">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k1.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k2.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k3.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
                             <span>儿童艺术展</span>
                         </p>
                     </a>
@@ -257,64 +363,4 @@
         </div>
     </div>
 </body>
-<script src="resource/child/js/jquery.gallery.js"></script>
 </html>
-<script type="text/javascript">
-    var bannerSwiper = new Swiper('.banner .swiper-container', {
-        watchSlidesProgress: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        loop: true,
-        loopedSlides: 3,
-        autoplay: {
-            delay: 5000,//1秒切换一次
-        },
-        navigation: {
-            nextEl: '.bannerSwiper-button-next',
-            prevEl: '.bannerSwiper-button-prev',
-        },
-        pagination: {
-            el: '.bannerSwiper-pagination',
-            clickable: true,
-        },
-        on: {
-            progress: function(progress) {
-                var modify=1;
-                for (i = 0; i < this.slides.length; i++) {
-                    var slide = this.slides.eq(i);
-                    var slideProgress = this.slides[i].progress;
-
-                    if (Math.abs(slideProgress) > 1) {
-                        modify = (Math.abs(slideProgress) - 1) * 0.4 + 1;
-                    }
-                    translate = slideProgress * modify * 318 + 'px';
-                    scale = 1 - Math.abs(slideProgress) /7.5;
-                    zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-                    slide.transform('translateX(' + translate + ') scale(' + scale + ')');
-                    slide.css('zIndex', zIndex);
-                    slide.css('opacity', 1);
-                    if (Math.abs(slideProgress) > 3) {
-                        slide.css('opacity', 0);
-                    }
-                }
-            },
-            setTransition: function(transition) {
-                for (var i = 0; i < this.slides.length; i++) {
-                    var slide = this.slides.eq(i)
-                    slide.transition(transition);
-                }
-
-            }
-        }
-
-    })
-    function bannerAutoHeight () {
-        var res= $('#dg-container .dg-wrapper a');
-        return res.parent().css('height',res.height());
-    }
-    bannerAutoHeight ();
-    // screen onchange
-    $(window).resize(function(){
-        bannerAutoHeight ();
-    });
-</script>
