@@ -1,56 +1,52 @@
 @media (min-width: 768px) and (max-width: 1024px) {
-  .article {
+  .article .video-describe {
     background: #946DB0;
-  }
-  .article .article-wrap {
     padding: 0 40px;
   }
-  .article .article-wrap .video-describe h2 {
+  .article .video-describe h2 {
     font-weight: bold;
     font-size: 40px;
     text-align: center;
     padding: 36px 0 22px 0;
   }
-  .article .article-wrap .video-describe .kids-player {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    background: #000;
+  .article .video-describe p {
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 32px;
+    text-indent: 2em;
   }
-  .article .article-wrap .article-content h2 {
+  .article .video-describe p img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .article .article-content .article-items {
+    background: #6F349C;
+    padding: 0 40px;
+  }
+  .article .article-content .article-items h2 {
     font-weight: bold;
     font-size: 36px;
     text-align: center;
     padding: 36px 0 22px 0;
   }
-  .article .article-wrap .article-content p {
+  .article .article-content .article-items p {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 32px;
+    padding-bottom: 32px;
     text-indent: 2em;
   }
-  .article .article-wrap .article-content p img {
+  .article .article-content .article-items p img {
     display: block;
     width: 100%;
     border-radius: 10px;
   }
-  .article .article-wrap .share {
-    padding-bottom: 40px;
-    text-align: center;
-  }
-  .article .article-wrap .share i {
-    display: inline-block;
-    width: 87px;
-    height: 88px;
-    background: url("../../images/share.png") no-repeat center;
-  }
-  .article .article-wrap .share p {
-    margin-top: 18px;
-    font-size: 22px;
-    font-weight: bold;
-  }
-  .article .article-wrap .share:active i {
-    background: url("../../images/share-bg.png") no-repeat center;
+  .article .article-content .article-items .kids-player {
+    margin-bottom: 32px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #000;
   }
   .about-article {
     background: #6F349C;
@@ -145,7 +141,7 @@
   .article .article-wrap .article-content p {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 32px;
+    padding-bottom: 32px;
     text-indent: 2em;
   }
   .article .article-wrap .article-content p img {

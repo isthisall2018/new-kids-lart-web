@@ -1,15 +1,17 @@
 @import "public";
-
+.padding(@pd: 40px){
+    padding: 0 @pd;
+}
 .h2(@mt: 36px,@mb: 22px,@font-size: 36px,@text-align: center){
     font-weight: bold;
     font-size: @font-size;
     text-align: @text-align;
     padding: @mt 0 @mb 0;
 }
-.p(@fz: 24px,@lh: 36px){
+.p(@fz: 24px,@lh: 36px,@mgt: 32px){
     font-size: @fz;
     line-height: @lh;
-    margin-bottom: 32px;
+    padding-bottom: @mgt;
     text-indent: 2em;
     img{
         display: block;
@@ -20,46 +22,52 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .article{
-        background: #946DB0;
-        .article-wrap{
-            padding: 0 40px;
-            .video-describe{
-                h2{
-                    .h2(@font-size: 40px)
-                }
-                .kids-player{
-                    .kids-player()
-                }
+        .video-describe{
+            background: #946DB0;
+            .padding();
+            h2{
+                .h2(@font-size: 40px)
             }
-            .article-content{
+            p{
+                .p();
+            }
+        }
+        .article-content{
+            .article-items{
+                background: #6F349C;
+                .padding();
                 h2{
                     .h2()
                 }
                 p{
-                    .p()
+                    .p();
                 }
-            }
-            .share{
-                padding-bottom: 40px;
-                text-align: center;
-                i{
-                    display: inline-block;
-                    width: 87px;
-                    height: 88px;
-                    background: url("../../images/share.png") no-repeat center;
-                }
-                p{
-                    margin-top: 18px;
-                    font-size: 22px;
-                    font-weight: bold;
-                }
-                &:active{
-                    i{
-                        background: url("../../images/share-bg.png") no-repeat center;
-                    }
+                .kids-player{
+                    margin-bottom: 32px;
+                    .kids-player();
                 }
             }
         }
+        //.share{
+        //    background: #ccc;
+        //    text-align: center;
+        //    i{
+        //        display: inline-block;
+        //        width: 87px;
+        //        height: 88px;
+        //        background: url("../../images/share.png") no-repeat center;
+        //    }
+        //    p{
+        //        margin-top: 18px;
+        //        font-size: 22px;
+        //        font-weight: bold;
+        //    }
+        //    &:active{
+        //        i{
+        //            background: url("../../images/share-bg.png") no-repeat center;
+        //        }
+        //    }
+        //}
     }
     .about-article{
         background: #6F349C;

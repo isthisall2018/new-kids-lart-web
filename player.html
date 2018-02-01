@@ -12,6 +12,7 @@
     <script src="resource/child/js/jquery.min.js"></script>
     <script src="resource/child/js/kids_video.js" type="text/javascript"></script>
     <script src="resource/child/js/swiper.min.js"></script>
+    <script src="resource/child/js/slimscroll.js"></script>
 </head>
 <body>
     <!--header-->
@@ -197,7 +198,7 @@
         </div>
         <!--series-->
         <div class="series-videos">
-            <div class="series-vessel">
+            <div class="series-vessel" id="series-vessel">
                 <div class="items active">
                     <a href="#">
                         <p class="image">
@@ -264,34 +265,157 @@
                         </p>
                     </a>
                 </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k3.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k1.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k4.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k5.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k3.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k3.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k1.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k4.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="items">
+                    <a href="#">
+                        <p class="image">
+                            <img src="resource/child/images/k5.png">
+                        </p>
+                        <p class="text">
+                            <img src="resource/child/images/i-video.png">
+                            <span>儿童艺术展</span>
+                        </p>
+                    </a>
+                </div>
             </div>
-
         </div>
         <!--arrow-->
         <div class="arrow-btn">
             <i class="arrow-icon"></i>
         </div>
+        <!--footer-->
+        <div style="height: 400px; line-height: 400px; text-align: center;background:#ccc;">footer 你不管</div>
     </div>
+
 </body>
     <script src="resource/child/js/common/common.js"></script>
     <script src="resource/child/js/common/vjs-kids-common.js"></script>
 </html>
 <script>
     $(function () {
-        var toggle=true;
-        $('.arrow-btn').click(function () {
-            var _this=$(this);
-            if(toggle){
-                _this.parent().addClass('open-active').find('.series-videos').show();
-                toggle=false;
-            }else {
-                _this.parent().removeClass('open-active');
-                setTimeout(function () {
-                    _this.prev().hide();
-                },600);
-                toggle=true;
-            }
+        //custom scroll bar
+        $('#series-vessel').slimScroll({
+            width: 'auto', //可滚动区域宽度
+            height: '100%', //可滚动区域高度
+            size: '15px', //组件宽度
+            color: '#fff', //滚动条颜色
+            position: 'right', //组件位置：left/right
+            distance: '0', //组件与侧边之间的距离
+            start: 'top', //默认滚动位置：top/bottom
+            opacity: 1, //滚动条透明度
+            alwaysVisible: true, //是否 始终显示组件
+            disableFadeOut: false, //是否 鼠标经过可滚动区域时显示组件，离开时隐藏组件
+            railVisible: true, //是否 显示轨道
+            railColor: '#FCD402', //轨道颜色
+            railOpacity: 1, //轨道透明度
+            borderRadius: '10px',
+            railBorderRadius : '10px'
         });
-    });
+        //slider
+        (function () {
+            var toggle=true;
+            $('.arrow-btn').click(function () {
+                var _this=$(this);
+                if(toggle){
+                    _this.parent().addClass('open-active').find('.series-videos').show();
+                    $('#series-vessel').mouseenter();
+                    toggle=false;
+                }else {
+                    _this.parent().removeClass('open-active');
+                    setTimeout(function () {
+                        _this.prev().hide();
+                    },600);
+                    toggle=true;
+                }
+            });
+        })();
 
+    });
 </script>
