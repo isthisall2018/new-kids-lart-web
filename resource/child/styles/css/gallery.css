@@ -369,6 +369,15 @@
   .gallery .gallery-wrap .g-items .items:nth-of-type(3n+1) {
     margin-left: 0;
   }
+  .last-video {
+    background: #35C2F7;
+  }
+  .tvShow-list {
+    background: #2878DA;
+  }
+  .tvShow-list .gallery-wrap .g-items {
+    padding-top: 3.5%;
+  }
 }
 @media (min-width: 768px) and (max-width: 850px) {
   .gallery .gallery-wrap .g-poster .items-poster a p.text {
