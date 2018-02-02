@@ -383,6 +383,18 @@
     width: 12px;
     height: 12px;
   }
+  background: #946DB0;
+  margin-top: -20px;
+  height: 24px !important;
+  line-height: 16px !important;
+  .sl-ld {
+    height: 24px;
+  }
+  .sl-ld .sl-ld-ball {
+    top: 3px;
+    width: 12px;
+    height: 12px;
+  }
   .last-video {
     background: #35C2F7;
   }
