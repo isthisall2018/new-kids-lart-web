@@ -8,8 +8,8 @@ function IsPC(){
     return flag;
 }
 var swiperObj={
-    slidesPerView: 2.5,
-    spaceBetween: 40,
+    slidesPerView: 3,
+    spaceBetween: 30,
     slidesPerGroup: 1,
     loop: false,
     loopFillGroupWithBlank: true,

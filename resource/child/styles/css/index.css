@@ -299,6 +299,7 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide a {
+    width: 100%;
     position: relative;
   }
   .category .scope .scope-slider .swiper-container .swiper-wrapper .swiper-slide a p.image img {

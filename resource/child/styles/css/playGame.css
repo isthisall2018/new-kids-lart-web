@@ -1,15 +1,39 @@
 .game-area {
+  padding-bottom: 40px;
   background: #FCC12F;
 }
-.game-area h2 {
+.game-area .game-wrap {
+  padding: 0 40px;
+}
+.game-area .game-wrap h2 {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
+  padding: 26px 0 18px 0;
 }
-.game-area .playGame {
-  padding: 0 40px;
-  padding: 10px;
+.game-area .game-wrap .playGame {
+  position: relative;
+  border: 10px solid #000;
   border-radius: 10px;
-  background: #000;
-  min-height: 400px;
+  background: url("../../images/banner/banner1.png") no-repeat;
+  background-size: cover;
+}
+.game-area .game-wrap .playGame img {
+  display: block;
+  width: 100%;
+  visibility: hidden;
+}
+.game-area .game-wrap .playGame .start-game {
+  position: absolute;
+  width: 170px;
+  top: 50%;
+  left: 50%;
+  background: #9336DE;
+  border-width: 8px;
+  border-color: #6001A5;
+  border-radius: 34px;
+  transform: translate(-50%, -50%);
+}
+.game-area .game-wrap .playGame .start-game:active {
+  border-width: 0;
 }

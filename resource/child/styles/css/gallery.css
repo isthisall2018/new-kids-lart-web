@@ -369,6 +369,20 @@
   .gallery .gallery-wrap .g-items .items:nth-of-type(3n+1) {
     margin-left: 0;
   }
+  .scrollload-bottom > div {
+    background: #946DB0;
+    margin-top: -20px;
+    height: 24px !important;
+    line-height: 16px !important;
+  }
+  .scrollload-bottom > div .sl-ld {
+    height: 24px;
+  }
+  .scrollload-bottom > div .sl-ld .sl-ld-ball {
+    top: 3px;
+    width: 12px;
+    height: 12px;
+  }
   .last-video {
     background: #35C2F7;
   }
