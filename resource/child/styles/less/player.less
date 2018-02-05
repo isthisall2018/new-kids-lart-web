@@ -120,17 +120,6 @@
                 .items{
                     position: relative;
                     .g-items();
-                    &:after{
-                        position: absolute;
-                        content: '';
-                        width: 100%;
-                        height: 100%;
-                        left: 0;
-                        top: 0;
-                        border: 5px solid transparent;
-                        box-sizing: border-box;
-                        border-radius: 10px;
-                    }
                     margin-bottom: 0;
                     margin-top: 3.5%;
                 }
@@ -140,11 +129,11 @@
                 .items:nth-of-type(1),.items:nth-of-type(2),.items:nth-of-type(3){
                     margin-top: 0;
                 }
-                .active{
-                    &:after{
-                        border-color: #fff;
-                    }
-                }
+                //.active{
+                //    &:after{
+                //        border-color: #fff;
+                //    }
+                //}
             }
             .slimScrollBar,.slimScrollRail{
                 display: none !important;

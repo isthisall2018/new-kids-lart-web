@@ -5,31 +5,31 @@
         .containerIpad();
     }
     .el-games{
-        ul{
-            overflow: hidden;
-            background: #ECA700;
-            li{
-                float: left;
-                width: 33.33%;
-                font-size: 36px;
-                padding: 10px 0 14px 0;
-                position: relative;
-                &:after{
-                    display: none;
-                    position: absolute;
-                    content: '';
-                    width: 136px;
-                    height: 5px;
-                    background: #F36F21;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
+        .nav-area{
+            .navMenu{
+                overflow: hidden;
+                background: #AE3F90;
+                a{
+                    float: left;
+                    width: 100px;
+                    text-align: left;
+                    font-size: 24px;
+                    padding: 15px 0 17px 0;
+                }
+                .current{
+                    color: #F36F21;
                 }
             }
-            .active{
-                &:after{
-                    display: block;
-                }
+        }
+        .games-area{
+            padding-top: 30px;
+            background: #FCC12F;
+            .items{
+                .g-items();
+                //margin: 3.5% 0 0 3.5%;
+            }
+            .items:nth-of-type(3n+1){
+                margin-left: 0;
             }
         }
     }

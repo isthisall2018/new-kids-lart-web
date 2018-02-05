@@ -270,7 +270,7 @@ textarea {
   }
   .header .header-kids .navBar .logo {
     float: left;
-    margin: 26px 40px 0 40px;
+    margin: 26px 40px 0 0;
   }
   .header .header-kids .navBar .logo a {
     display: block;
@@ -309,7 +309,7 @@ textarea {
     text-align: center;
   }
   .header .header-kids .login {
-    margin: 36px 23px 0 0;
+    margin: 36px 0 0 0;
   }
   .header .header-kids .login a {
     line-height: 57px;
