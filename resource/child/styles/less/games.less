@@ -1,0 +1,36 @@
+@import "public";
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container{
+        .containerIpad();
+    }
+    .el-games{
+        ul{
+            overflow: hidden;
+            background: #ECA700;
+            li{
+                float: left;
+                width: 33.33%;
+                font-size: 36px;
+                padding: 10px 0 14px 0;
+                position: relative;
+                &:after{
+                    display: none;
+                    position: absolute;
+                    content: '';
+                    width: 136px;
+                    height: 5px;
+                    background: #F36F21;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .active{
+                &:after{
+                    display: block;
+                }
+            }
+        }
+    }
+}
