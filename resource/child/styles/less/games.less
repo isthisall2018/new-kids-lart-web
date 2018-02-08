@@ -3,15 +3,134 @@
     padding-top: @pd;
     background: #FCC12F;
 }
+@media (min-width: 1025px) {
+    .container{
+        .containerIpad();
+    }
+    .el-games{
+        .game_com(0);
+        .nav-area{
+            margin-bottom: 30px;
+            background: #AE3F90;
+            .navMenu{
+                overflow: hidden;
+                a{
+                    float: left;
+                    width: 120px;
+                    height: 86px;
+                    line-height: 86px;
+                    text-align: left;
+                    font-size: 24px;
+                    padding-left: 5px;
+                }
+                .current{
+                    color: #F36F21;
+                }
+                .icon-toggle{
+                    float: right;
+                    width: 42px;
+                    height: 42px;
+                    margin-top: 22px;
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    background: url("../../images/g-row.png") no-repeat center;
+                }
+                .open{
+                    background: url("../../images/g-col.png") no-repeat center;
+                }
+            }
+        }
+        .row-content{
+            background: #FCC12F;
+            .games-area{
+                .items{
+                    .g-items(2%,2%,32%);
+                }
+                .additional{
+                    .items{
+                        .g-items(0,2%,32%);
+                        margin-bottom: 0;
+                    }
+                    position: relative;
+                    width: 100%;
+                    overflow: visible;
+                    box-shadow: none;
+                    .items-poster{
+                        width: 66%;
+                        float: right;
+                        a{
+                            p.text{
+                                padding: 5.5% 0 6.5% 15%;
+                                img{
+                                    width: 12%;
+                                    left: 5%;
+                                }
+                                span{
+                                    font-size: 50px;
+                                }
+                            }
+                        }
+                    }
+                    .items:last-of-type{
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+                .items:nth-of-type(3n+1){
+                    margin-left: 0;
+                }
+            }
+            .other-more{
+                padding-top: 0;
+            }
+        }
+        .col-content{
+            display: none;
+            padding-bottom: 30px;
+            .list-items{
+                padding: 18px 0;
+                border-bottom: 1px solid #fff;
+                position: relative;
+                .image{
+                    float: left;
+                    width: 292px;
+                    img{
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+                }
+                .text-info{
+                    padding-left: 324px;
+                    font-size: 20px;
+                    h2{
+                        padding: 10px 0 28px 0;
+                        font-size: 26px;
+                        font-weight: bold;
+                    }
+                    p{
+                        max-height: 94px;
+                        overflow: hidden;
+                        line-height: 1.5;
+                    }
+                }
+
+            }
+            .list-items:last-of-type{
+                border: none;
+            }
+        }
+    }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
     .container{
         .containerIpad();
     }
     .el-games{
         .nav-area{
+            background: #AE3F90;
             .navMenu{
                 overflow: hidden;
-                background: #AE3F90;
                 a{
                     float: left;
                     width: 120px;
