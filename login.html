@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆</title>
+    <link rel="stylesheet" href="./resource/child/styles/css/common.css">
+    <!--<link rel="stylesheet" href="./resource/child/styles/css/zeroModal.css">-->
+    <script src="./resource/child/js/jquery.min.js"></script>
+    <!--<script src="./resource/child/js/zeroModal.min.js"></script>-->
+    <!--<style>-->
+        <!--.user-layer{-->
+            <!--position: absolute;-->
+            <!--left: 0;-->
+            <!--top: 0;-->
+            <!--width: 100%;-->
+            <!--height: 100%;-->
+            <!--background: rgba(0,0,0,0.4);-->
+        <!--}-->
+        <!--.user-wrap{-->
+            <!--position: absolute;-->
+            <!--left: 50%;-->
+            <!--top: 50%;-->
+            <!--font-size: 18px;-->
+            <!--width: 600px;-->
+            <!--padding: 5px;-->
+            <!--background: green;-->
+            <!--transform: translate(-50%,-50%);-->
+            <!--border-radius: 10px;-->
+            <!--box-shadow: 3px 4px 6px rgba(0,0,0,0.2);-->
+        <!--}-->
+        <!--.login-form {-->
+            <!--padding: 20px;-->
+            <!--background: #fff;-->
+            <!--border-radius: 10px;-->
+        <!--}-->
+         <!--.login-form div {-->
+            <!--margin-bottom: 22px;-->
+            <!--color: #444443;-->
+            <!--position: relative;-->
+        <!--}-->
+         <!--.login-form input {-->
+            <!--width: 100%;-->
+            <!--height: 40px;-->
+            <!--padding: 8px 10px;-->
+            <!--border: 1px solid #c2c2c2;-->
+            <!--border-radius: 5px;-->
+            <!--font-size: 16px;-->
+            <!--color: #444443;-->
+        <!--}-->
+         <!--.login-form p {-->
+            <!--position: absolute;-->
+            <!--bottom: -20px;-->
+            <!--left: 0;-->
+            <!--font-size: 14px;-->
+            <!--height: 20px;-->
+            <!--padding-left: 10px;-->
+        <!--}-->
+         <!--.login-form input.login_btn {-->
+            <!--background: #4caf50;-->
+            <!--padding: 0;-->
+            <!--border: 0;-->
+            <!--color: #fff;-->
+            <!--cursor: pointer;-->
+        <!--}-->
+         <!--.login-form .Fpsd-login {-->
+            <!--margin: 20px 0 30px 0;-->
+            <!--height: 25px;-->
+        <!--}-->
+         <!--.login-form .Fpsd-login .forget-psd {-->
+            <!--float: left;-->
+            <!--color: #4e4e4e;-->
+        <!--}-->
+         <!--.login-form .Fpsd-login .regiser-btn {-->
+            <!--float: right;-->
+            <!--color: #4CAF50;-->
+        <!--}-->
+         <!--.login-form .Fpsd-login .regiser-btn span {-->
+            <!--text-decoration: underline;-->
+        <!--}-->
+         <!--.login-form .three_account {-->
+            <!--width: 214px;-->
+            <!--height: 76px;-->
+            <!--margin: 0 auto;-->
+            <!--padding-top: 30px;-->
+            <!--text-align: center;-->
+            <!--border-top: 1px solid #696969;-->
+            <!--position: relative;-->
+        <!--}-->
+         <!--.login-form .three_account i {-->
+            <!--display: inline-block;-->
+            <!--cursor: pointer;-->
+        <!--}-->
+         <!--.login-form .three_account i img {-->
+            <!--height: 30px;-->
+        <!--}-->
+         <!--.login-form .three_account .weibo_icon {-->
+            <!--margin-left: 20px;-->
+        <!--}-->
+         <!--.login-form .three_account span.title {-->
+            <!--color: #696969;-->
+            <!--background: #f6fcfc;-->
+            <!--padding: 0 4px;-->
+            <!--height: 20px;-->
+            <!--line-height: 20px;-->
+            <!--width: 170px;-->
+            <!--position: absolute;-->
+            <!--top: -10px;-->
+            <!--left: 22px;-->
+        <!--}-->
+    <!--</style>-->
+</head>
+<body>
+    <a onclick="_basic()" style="color: blue">登陆</a>
+
+    <div class="user-layer">
+        <div class="user-wrap">
+            <form class="login-form" action="#" method="post" onsubmit="return check()">
+                <div class="title">已注册用户：</div>
+                <div class="ipt-account">
+                    <input type="text" name="username" id="username" placeholder="手机号/邮箱">
+                </div>
+                <div class="ipt-psd">
+                    <input type="password" name="password" id="password" placeholder="密码">
+                </div>
+                <div class="login_btn">
+                    <input class="btn kids-btn login_btn" type="button" value="登录" onclick="check()">
+                </div>
+                <div class="Fpsd-login">
+                    <a class="forget-psd" onclick="jumpTo()">忘记密码？</a>
+                    <a class="regiser-btn"><span>或注册账号</span>&gt;&gt;</a>
+                </div>
+                <div class="three_account">
+                    <i class="wechat_icon" onclick="wxLogin()">
+                        <img src="./resource/child/images/i-wechat.png" alt="wx-icon">
+                    </i>
+                    <i class="weibo_icon" onclick="wbLogin()">
+                        <img src="./resource/child/images/i-weibo.png" alt="wb-icon">
+                    </i>
+                    <span>使用第三方账号登录</span>
+                </div>
+            </form>
+            <!--close btn-->
+            <div class="close-btn"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    function _basic(){
+        $('.user-layer').addClass('show');
+    }
+    $('.regiser-btn').click(function () {
+        $('.login-form').load('./README.md')
+    });
+    $('.user-wrap .close-btn').click(function () {
+        $('.user-layer').removeClass('show');
+
+
+
+    });
+</script>
