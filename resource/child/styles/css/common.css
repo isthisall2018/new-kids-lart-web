@@ -370,39 +370,38 @@ textarea {
   .kids-nav .swiper-container .page-Arrows .swiper-button-prev .i-arrows:active {
     background: url("../../images/left-angle-g.png");
   }
-  .user-layer {
+  .kidsFrame {
     display: none;
     position: fixed;
-    left: 0;
     top: 0;
-    width: 100%;
+    left: 0;
     height: 100%;
-    opacity: 0;
-    background: rgba(0, 0, 0, 0.4);
-    transition: opacity .15s linear;
+    width: 100%;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.5);
   }
-  .user-layer .user-wrap {
+  .kidsFrame .kids-form {
     position: absolute;
-    left: 50%;
     top: 50%;
-    font-size: 18px;
-    width: 600px;
-    padding: 5px;
-    background: #439539;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 68%;
+    height: auto;
     border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    transform: translate(-50%, -50%);
   }
-  .user-layer .user-wrap .login-form {
+  .kidsFrame .kids-form .form-content .login-form {
     padding: 40px;
     background: #F3F3F4;
     border-radius: 10px;
   }
-  .user-layer .user-wrap .login-form div {
+  .kidsFrame .kids-form .form-content .login-form div {
     margin-top: 46px;
     font-size: 28px;
     color: #A3A3A3;
   }
-  .user-layer .user-wrap .login-form div input {
+  .kidsFrame .kids-form .form-content .login-form div input {
     width: 100%;
     height: 80px;
     padding: 20px 30px;
@@ -412,42 +411,67 @@ textarea {
     color: #444443;
     background: #fff;
   }
-  .user-layer .user-wrap .login-form div .login_btn {
+  .kidsFrame .kids-form .form-content .login-form div .login_btn {
     background: #F36F21;
     padding: 0;
     border: 0;
     color: #fff;
     cursor: pointer;
   }
-  .user-layer .user-wrap .login-form .title {
+  .kidsFrame .kids-form .form-content .login-form .title {
     margin-top: -8px;
     font-size: 36px;
     font-weight: bold;
     color: #439539;
   }
-  .user-layer .user-wrap .login-form .ipt-account {
+  .kidsFrame .kids-form .form-content .login-form .ipt-account {
     margin-top: 35px;
   }
-  .user-layer .user-wrap .login-form .Fpsd-login {
+  .kidsFrame .kids-form .form-content .login-form .same-layout input {
+    width: 48%;
+  }
+  .kidsFrame .kids-form .form-content .login-form .same-layout a {
+    float: right;
+    width: 48%;
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    background: #8a5eb5;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    box-sizing: border-box;
+  }
+  .kidsFrame .kids-form .form-content .login-form .same-layout .continue_btn {
+    background: #F36F21;
+    border: 0;
+    color: #fff;
+  }
+  .kidsFrame .kids-form .form-content .login-form .same-layout .goBack {
+    background: #fff;
+    border: 2px solid #F36F21;
+    color: #F36F21;
+  }
+  .kidsFrame .kids-form .form-content .login-form .Fpsd-login {
     margin: 30px 0 44px 0;
     height: 28px;
   }
-  .user-layer .user-wrap .login-form .Fpsd-login a {
+  .kidsFrame .kids-form .form-content .login-form .Fpsd-login a {
     height: 28px;
-    line-height: 28px;
+    color: #A3A3A3;
   }
-  .user-layer .user-wrap .login-form .Fpsd-login .forget-psd {
+  .kidsFrame .kids-form .form-content .login-form .Fpsd-login .forget-psd {
     float: left;
     color: #A3A3A3;
   }
-  .user-layer .user-wrap .login-form .Fpsd-login .regiser-btn {
+  .kidsFrame .kids-form .form-content .login-form .Fpsd-login .regiser-btn {
     float: right;
     color: #F36F21;
   }
-  .user-layer .user-wrap .login-form .Fpsd-login .regiser-btn span {
+  .kidsFrame .kids-form .form-content .login-form .Fpsd-login .regiser-btn span {
     text-decoration: underline;
   }
-  .user-layer .user-wrap .login-form .three_account {
+  .kidsFrame .kids-form .form-content .login-form .three_account {
     width: 320px;
     margin: 0 auto;
     padding-top: 38px;
@@ -455,17 +479,17 @@ textarea {
     border-top: 2px solid #439539;
     position: relative;
   }
-  .user-layer .user-wrap .login-form .three_account i {
+  .kidsFrame .kids-form .form-content .login-form .three_account i {
     display: inline-block;
     cursor: pointer;
   }
-  .user-layer .user-wrap .login-form .three_account i img {
+  .kidsFrame .kids-form .form-content .login-form .three_account i img {
     height: 50px;
   }
-  .user-layer .user-wrap .login-form .three_account .weibo_icon {
+  .kidsFrame .kids-form .form-content .login-form .three_account .weibo_icon {
     margin-left: 40px;
   }
-  .user-layer .user-wrap .login-form .three_account span {
+  .kidsFrame .kids-form .form-content .login-form .three_account span {
     position: absolute;
     height: 28px;
     top: -16px;
@@ -478,18 +502,27 @@ textarea {
     background: #F3F3F4;
     transform: translateX(-50%);
   }
-  .user-layer .user-wrap .close-btn {
+  .kidsFrame .kids-form .form-content .md-close {
     position: absolute;
     height: 60px;
     width: 60px;
     top: 12px;
     right: 14px;
+    padding: 0;
     cursor: pointer;
     background: url('../../images/i-close.png') no-repeat center;
   }
+  .kidsFrame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+  }
   .show {
     display: block;
-    opacity: 1;
   }
 }
 @media (min-width: 768px) and (max-width: 850px) {

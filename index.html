@@ -58,7 +58,7 @@
                 </ul>
             </div>
             <div class="login fr">
-                <a href="login.html" class="btn kids-btn login-btn">
+                <a class="btn kids-btn login-btn" id="login-btn">
                     <span>登录</span>
                     <i>
                         <img src="resource/child/images/login-user.png" alt="i-user">
@@ -476,19 +476,113 @@
     </div>
     <!--footer-->
     <div class="footer"></div>
+    <!--login iframe-->
+
+    <div class="kidsFrame login">
+        <div class="kids-form">
+            <div class="form-content">
+                <form class="login-form" action="#" method="post" onsubmit="return check()">
+                    <div class="title">已注册用户：</div>
+                    <div class="ipt-account">
+                        <input type="text" name="username" id="username" placeholder="手机号/邮箱">
+                    </div>
+                    <div class="ipt-psd">
+                        <input type="password" name="password" id="password" placeholder="密码">
+                    </div>
+                    <div class="login_btn">
+                        <input class="btn kids-btn login_btn" type="button" value="登录" onclick="check()">
+                    </div>
+                    <div class="Fpsd-login">
+                        <a id="forget-psd">忘记密码？</a>
+                        <a class="regiser-btn" id="register-btn"><span>或注册账号</span>&gt;&gt;</a>
+                    </div>
+                    <div class="three_account">
+                        <i class="wechat_icon" onclick="wxLogin()">
+                            <img src="./resource/child/images/i-wechat.png" alt="wx-icon">
+                        </i>
+                        <i class="weibo_icon" onclick="wbLogin()">
+                            <img src="./resource/child/images/i-weibo.png" alt="wb-icon">
+                        </i>
+                        <span>使用第三方账号登录</span>
+                    </div>
+                </form>
+                <!--close btn-->
+                <div class="md-close" data-dismiss="modal"></div>
+            </div>
+        </div>
+        <iframe src="about:blank" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <div class="kidsFrame forget">
+        <div class="kids-form">
+            <div class="form-content">
+                <form class="login-form" action="#" method="post" onsubmit="return check()">
+                    <div class="title">忘记密码：</div>
+                    <div class="ipt-account">
+                        <input type="text" name="username" id="username" placeholder="手机号/邮箱">
+                    </div>
+                    <div class="ipt-psd">
+                        <input type="password" name="password" id="password" placeholder="新密码">
+                    </div>
+                    <div class="same-layout ipt-validate">
+                        <input type="text" class="v-code" name="v-code" id="validateCode" placeholder="验证码">
+                        <a class="getCode" onclick="getAuthCode()">获取验证码</a>
+                    </div>
+                    <div class="same-layout click-continue">
+                        <input class="continue_btn" type="button" onclick="check()" value="修改">
+                        <a class="goBack">返回</a>
+                    </div>
+                </form>
+                <!--close btn-->
+                <div class="md-close" data-dismiss="modal"></div>
+            </div>
+        </div>
+        <iframe src="about:blank" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <div class="kidsFrame register">
+        <div class="kids-form">
+            <div class="form-content">
+                <form class="login-form" action="#" method="post" onsubmit="return check()">
+                    <div class="title">注册账号：</div>
+                    <div class="ipt-account">
+                        <input type="text" name="username" id="username" placeholder="手机号/邮箱">
+                    </div>
+                    <div class="ipt-psd">
+                        <input type="password" name="password" id="password" placeholder="新密码">
+                    </div>
+                    <div class="same-layout ipt-validate">
+                        <input type="text" class="v-code" name="v-code" id="validateCode" placeholder="验证码">
+                        <a class="getCode" onclick="getAuthCode()">获取验证码</a>
+                    </div>
+                    <div class="ipt-username">
+                        <input type="text" name="name" id="name" placeholder="昵称">
+                    </div>
+                    <div class="same-layout click-continue">
+                        <input class="continue_btn" type="button" onclick="check()" value="修改">
+                        <a class="goBack">返回</a>
+                    </div>
+                </form>
+                <!--close btn-->
+                <div class="md-close" data-dismiss="modal"></div>
+            </div>
+        </div>
+        <iframe src="about:blank" frameborder="0" scrolling="no"></iframe>
+    </div>
+
 </body>
 </html>
 
 <script type="text/javascript">
-   var bannerSwiper = new Swiper('.banner .swiper-container', {
+    var bannerSwiper = new Swiper('.banner .swiper-container', {
         watchSlidesProgress: true,
         slidesPerView: 'auto',
         centeredSlides: true,
         loop: true,
         loopedSlides: 3,
-           autoplay: {
-               delay: 5000,//1秒切换一次
-           },
+        autoplay: {
+            delay: 5000,//1秒切换一次
+        },
         navigation: {
             nextEl: '.bannerSwiper-button-next',
             prevEl: '.bannerSwiper-button-prev',
@@ -562,4 +656,25 @@
             location.href='/'+res;
         },300)
     });
+</script>
+<script>
+    $('#login-btn').click(function () {
+        $('.login').addClass('show');
+    });
+    $('.md-close').click(function () {
+        $(this).parents('.kidsFrame').removeClass('show');
+    });
+    $('#forget-psd').click(function () {
+        $(this).parents('.kidsFrame').removeClass('show');
+        $('.forget').addClass('show');
+    });
+    $('#register-btn').click(function () {
+        $(this).parents('.kidsFrame').removeClass('show');
+        $('.register').addClass('show');
+    });
+    $('.goBack').click(function () {
+        $(this).parents('.kidsFrame').removeClass('show');
+        $('.login').addClass('show');
+    });
+
 </script>
