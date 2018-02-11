@@ -11,6 +11,7 @@
     <script src="resource/child/js/common/common.js"></script>
     <script src="resource/child/js/jquery.min.js"></script>
     <script src="resource/child/js/swiper.min.js"></script>
+    <script src="resource/child/js/jquery.validate.js"></script>
 </head>
 <body>
     <!--header-->
@@ -481,7 +482,7 @@
     <div class="kidsFrame login">
         <div class="kids-form">
             <div class="form-content">
-                <form class="login-form" action="#" method="post" onsubmit="return check()">
+                <form class="login-form" id="loginForm" action="#" method="post">
                     <div class="title">已注册用户：</div>
                     <div class="ipt-account">
                         <input type="text" name="username" id="username" placeholder="手机号/邮箱">
@@ -490,7 +491,7 @@
                         <input type="password" name="password" id="password" placeholder="密码">
                     </div>
                     <div class="login_btn">
-                        <input class="btn kids-btn login_btn" type="button" value="登录" onclick="check()">
+                        <input class="btn kids-btn login_btn" type="submit" value="登录">
                     </div>
                     <div class="Fpsd-login">
                         <a id="forget-psd">忘记密码？</a>
@@ -510,26 +511,25 @@
                 <div class="md-close" data-dismiss="modal"></div>
             </div>
         </div>
-        <iframe src="about:blank" frameborder="0" scrolling="no"></iframe>
     </div>
 
     <div class="kidsFrame forget">
         <div class="kids-form">
             <div class="form-content">
-                <form class="login-form" action="#" method="post" onsubmit="return check()">
+                <form class="login-form" id="forgetForm" action="#" method="post">
                     <div class="title">忘记密码：</div>
                     <div class="ipt-account">
-                        <input type="text" name="username" id="username" placeholder="手机号/邮箱">
+                        <input type="text" name="forgetUsername" id="forgetUsername" placeholder="手机号/邮箱">
                     </div>
                     <div class="ipt-psd">
-                        <input type="password" name="password" id="password" placeholder="新密码">
+                        <input type="password" name="forgetPassword" id="forgetPassword" placeholder="新密码">
                     </div>
                     <div class="same-layout ipt-validate">
-                        <input type="text" class="v-code" name="v-code" id="validateCode" placeholder="验证码">
-                        <a class="getCode" onclick="getAuthCode()">获取验证码</a>
+                        <input type="text" class="v-code" name="forgetValidateCode" id="forgetValidateCode" placeholder="验证码">
+                        <a class="getCode" onclick="getAuthCode(this)">获取验证码</a>
                     </div>
                     <div class="same-layout click-continue">
-                        <input class="continue_btn" type="button" onclick="check()" value="修改">
+                        <input class="continue_btn" type="submit" value="修改">
                         <a class="goBack">返回</a>
                     </div>
                 </form>
@@ -537,29 +537,28 @@
                 <div class="md-close" data-dismiss="modal"></div>
             </div>
         </div>
-        <iframe src="about:blank" frameborder="0" scrolling="no"></iframe>
     </div>
 
     <div class="kidsFrame register">
         <div class="kids-form">
             <div class="form-content">
-                <form class="login-form" action="#" method="post" onsubmit="return check()">
+                <form class="login-form" id="registerForm" action="#" method="post">
                     <div class="title">注册账号：</div>
                     <div class="ipt-account">
-                        <input type="text" name="username" id="username" placeholder="手机号/邮箱">
+                        <input type="text" name="registerUsername" id="registerUsername" placeholder="手机号/邮箱">
                     </div>
                     <div class="ipt-psd">
-                        <input type="password" name="password" id="password" placeholder="新密码">
+                        <input type="password" name="registerPassword" id="registerPassword" placeholder="新密码">
                     </div>
                     <div class="same-layout ipt-validate">
-                        <input type="text" class="v-code" name="v-code" id="validateCode" placeholder="验证码">
-                        <a class="getCode" onclick="getAuthCode()">获取验证码</a>
+                        <input type="text" class="v-code" name="registerValidateCode" id="registerValidateCode" placeholder="验证码">
+                        <a class="getCode" onclick="getAuthCode(this)">获取验证码</a>
                     </div>
                     <div class="ipt-username">
                         <input type="text" name="name" id="name" placeholder="昵称">
                     </div>
                     <div class="same-layout click-continue">
-                        <input class="continue_btn" type="button" onclick="check()" value="修改">
+                        <input class="continue_btn" type="submit" value="注册">
                         <a class="goBack">返回</a>
                     </div>
                 </form>
@@ -676,5 +675,149 @@
         $(this).parents('.kidsFrame').removeClass('show');
         $('.login').addClass('show');
     });
+    $("#loginForm").validate({
+        rules: {
+            username: {
+                required: true,
+                kidsUsername: true,
+            },
+            password: {
+                required: true,
+                kidsPassword: true,
+            },
+        },
+        messages: {
+            username: {
+                required: "用户名不能为空！",
+                kidsUsername: "请输入正确的手机号或邮箱！"
+            },
+            password: {
+                required: "密码不能为空！",
+                kidsPassword: "密码必须为6至18位字符！"
+            },
+        }
+    });
+    $("#forgetForm").validate({
+        rules: {
+            forgetUsername: {
+                required: true,
+                kidsUsername: true,
+            },
+            forgetPassword: {
+                required: true,
+                kidsPassword: true,
+            },
+            forgetValidateCode: {
+                required: true,
+            },
+        },
+        messages: {
+            forgetUsername: {
+                required: "用户名不能为空！",
+                kidsUsername: "请输入正确的手机号或邮箱！"
+            },
+            forgetPassword: {
+                required: "密码不能为空！",
+                kidsPassword: "密码必须为6至18位字符！"
+            },
+            forgetValidateCode:{
+                required: "验证码不能为空！",
+            },
+        }
+    });
+    $("#registerForm").validate({
+        rules: {
+            registerUsername: {
+                required: true,
+                kidsUsername: true,
+            },
+            registerPassword: {
+                required: true,
+                kidsPassword: true,
+            },
+            registerValidateCode: {
+                required: true,
+            },
+            name: {
+                required: true,
+                rangelength:[2,6],
+            },
+        },
+        messages: {
+            registerUsername: {
+                required: "用户名不能为空！",
+                kidsUsername: "请输入正确的手机号或邮箱！"
+            },
+            registerPassword: {
+                required: "密码不能为空！",
+                kidsPassword: "密码必须为6至18位字符！"
+            },
+            registerValidateCode:{
+                required: "验证码不能为空！",
+            },
+            name: {
+                required: "昵称不能为空！",
+                rangelength: "用户名为2至6位字符！"
+            },
+        }
+    });
 
+    $.validator.addMethod("kidsUsername", function(value, element) {
+        value=""+value;
+        if(value){
+            if((!Validate.isEmail(value))&&(!Validate.isPhone(value))){
+                return false;
+            }else{
+                return true;
+            }
+        }else{
+            return null;
+        }
+    });
+
+
+
+
+    $.validator.addMethod("kidsPassword", function(value, element) {
+        value=""+value;
+        if(value){
+            if(!Validate.isPassword(value)){
+                return false;
+            }else{
+                return true;
+            }
+        }else{
+            return null;
+        }
+    });
+    var Validate={
+        isPhone : function(contact){
+            var reg=/^((1[0-9]{2})|(15[0-9])|(18[0-9])|(17[0-9]))\d{8}$/;//手机号
+            return reg.test(contact);
+        },
+        isEmail: function(contact){
+            var reg=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;//邮箱
+            return reg.test(contact);
+        },
+        isPassword: function(password){
+            var regPassword = /^.{6,18}$/;
+            return regPassword.test(password);
+        },
+    };
+
+    function getAuthCode(_this) {
+
+        var _this=$(_this);
+        _this.html('重新获取 59s');
+        var num=10;
+        var cleanTime = setInterval(function () {
+            if (num==0) {
+                clearInterval(cleanTime);
+                _this.html('获取验证码').attr('onclick','getAuthCode(this)')
+            } else{
+                num--;
+                _this.html('重新获取 '+num+'s').attr('onclick','return false');
+            }
+        },1000);
+    }
 </script>
